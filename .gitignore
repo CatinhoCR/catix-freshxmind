@@ -1,0 +1,59 @@
+# WordPress #
+############
+**/LICENSE.txt
+wp-cli.local.yml
+sitemap.xml
+sitemap.xml.gz
+*.log
+build/
+
+# TODO: Add support #
+.github/
+PULL_REQUEST_TEMPLATE.md
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+!wp-includes/**/*.gz
+
+# Logs and databases #
+######################
+*.log
+*.sql
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Thumbs.db
+._*
+.vscode
+
+# Vim generated files #
+######################
+*.un~
+
+# SASS #
+##########
+.sass-cache
+
+# WEBPACK, NPM #
+##########
+node_modules
+package-lock.json
+*.hot-update.json
+*.hot-update.js
+
+# CUSTOM - TEMPORARY #
+##########
+**/*-old
+*-old.*

@@ -1,0 +1,12 @@
+// Positioning
+// TODO: Deprecate
+@mixin flex-children ($align: flex-start, $justify: flex-start, $height: 100%) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  height: $height;
+}
+
+@mixin center-children {
+  @include flex-children(center, center);
+}

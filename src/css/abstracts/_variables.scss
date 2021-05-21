@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Open+Sans:wght@300;400;700&family=Poppins:wght@300;400&family=Roboto:wght@300;400;500;700&display=swap');
+
+$white: #fff;
+$warm-white: #f7f7f7;
+$lightest-grey: #ccc;
+$light-grey: #757575;
+$dark-grey: #272726;
+$warm-black: #272727;
+$black: #000;
+$color-light-border: #e4e9ed;
+$label-grey: #020202;
+
+// Theme Colors
+$blue: #05386b;
+$sky-blue: #48b5d6;
+$light-blue: #0077c8;
+$mid-blue: #054880;
+$dark-blue: #070a17;
+$red: #9e3226;
+$light-red: #e82535;
+$dark-red: #c92830;
+$orange: #ee792b;
+$dark-orange: #ff652f;
+$yellow: #ffe400;
+$dark-yellow: #fbcf4e;
+$green: #14a76c;
+$light-green: #12b35f;
+$dark-green: #108a4b;
+$teal: #00465f;
+$light-teal: #074f67;
+$dark-teal: #143548;
+
+$main-color: var(--main-color, $red);
+// $second
+// $third
+// $fourth
+// $success
+// $error
+// $alert
+// $warning
+// $info
+// light
+// dark
+
+// @todo Theme Colors array (& color vars above) need better naming and conventions
+// $main
+
+// We use this to generate color helper classes in 'themes/_color-classes'
+$theme-colors: (
+  white: $white,
+  warm-white: $warm-white,
+  blue: $blue,
+  sky-blye: $sky-blue,
+  light-blue: $light-blue,
+  mid-blue: $mid-blue,
+  dark-blue: $dark-blue,
+  red: $red,
+  light-red: $light-red,
+  dark-red: $dark-red,
+  orange: $orange,
+  light-orange: lighten($orange, 10),
+  dark-orange: $dark-orange,
+  yellow: $yellow,
+  light-yellow: lighten($yellow, 10),
+  dark-yellow: $dark-yellow,
+  green: $green,
+  light-green: lighten($green, 10),
+  dark-green: $dark-green,
+  teal: $teal,
+  light-teal: $light-teal,
+  dark-teal: $dark-teal,
+  lightest-grey: $lightest-grey,
+  light-grey: $light-grey,
+  dark-grey: $dark-grey,
+  label-grey: $label-grey,
+  black: $black,
+);
+
+// Fonts TODO: Change
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Lato', sans-serif;
+$font-label: 'Roboto', sans-serif;
+$font-misc: 'Poppins', sans-serif;
+
+// Weights
+$light-weight: 300;
+$normal-weight: 400;
+$medium-weight: 500;
+$bold-weight: 700;
+
+// Browser Context Sizing for unit/measurement
+$browser-context: 10px;
+$base-line-height: 1.5;
+$base-letter-spacing: 0;
+
+// Breakpoints
+$breakpoints: (
+  xs: 500px,
+  sm: 700px,
+  md: 960px,
+  lg: 1080px,
+  xl: 1280px,
+  xxl: 1400px
+);
+
+$xs: map-get($breakpoints, xs);
+$sm: map-get($breakpoints, sm);
+$md: map-get($breakpoints, md);
+$lg: map-get($breakpoints, lg);
+$xl: map-get($breakpoints, xl);
+$xxl: map-get($breakpoints, xxl);
+
+// Paddings
+$padding-side-mobile: 20px;
+$padding-side-tablet: 30px;
+$padding-side-desktop: 40px;
+
+// Container
+$grid-columns: 12;
+
+// Defined width
+$max-width-block-text: 668px;
+
+// Navigation Heights
+$nav-height-mobile: 80px;
+$nav-height-desktop: 110px;
+$nav-height-scrolled: 60px;
+$top-banner-height: 80px;
+$bottom-banner-height: 60px;
+
+// Miscellaneous measurements
+$circle-button-scale: 1.08;
+
+// Z-Indexes
+// Z-Indexes
+$z-layers: (
+  'notice-bars': 9999,
+  'navigation': 9998,
+  'search-nav': 9997,
+  'hamburger': 9996,
+  'overlay': 9995,
+  'footer': 9994,
+  'slider-nav': 9993
+);
