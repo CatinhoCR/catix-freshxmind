@@ -33,7 +33,9 @@ If you'd like to use `npm` instead of `Yarn`, simply delete the `yarn.lock` in t
 ## Theme Structure
 
 Very briefly, the **template files** used to render content **execute functions** (you'll notice them all around, for instance in `header.php`).
+
 These functions are simple `do_action()` **hooks** (located at `/inc/core/theme-hooks.php`).
+
 These Hooks are calling functions defined as **Template Parts** methods (Look at `inc/template-parts/` for the corresponding methods)
 
 This is done for 2 main reasons:
