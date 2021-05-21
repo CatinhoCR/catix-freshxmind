@@ -32,6 +32,19 @@ If you'd like to use `npm` instead of `Yarn`, simply delete the `yarn.lock` in t
 
 ## Theme Structure
 
+Very briefly, the **template files** used to render content **execute functions** (you'll notice them all around, for instance in `header.php`).
+These functions are simple `do_action()` **hooks** (located at `/inc/core/theme-hooks.php`).
+These Hooks are calling functions defined as **Template Parts** methods (Look at `inc/template-parts/` for the corresponding methods)
+
+This is done for 2 main reasons:
+
+- If the theme was to grow into a standalone solution it would make it super easy to re-write template parts by hooking into the right action from a child theme
+- It keeps the templates code so much cleaner and easier to read, maintain and update where it needs to be.
+
+**This is the way.**
+
+Note: For super simple projects, you could skip this step and simply do `get_template_part()` functions directly from your templates, or just throw all that messy code in that single file _(yikes)_.
+
 Here's a quick overview and walkthrough of how the theme's organized and the folder structure. **Look at `functions.php` and the `/inc/` folder**
 
 ## Styles
