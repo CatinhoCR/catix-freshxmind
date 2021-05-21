@@ -15,7 +15,7 @@
  * FxM is a very powerful theme and virtually anything can be customized
  * via a child theme.
  *
- * @package     freshxmind
+ * @package     FreshXmind
  * @author      Cato
  * @copyright   Copyright (c) 2021, CATIX
  * @link        https://cato506.com/
@@ -109,6 +109,8 @@ if ( ! class_exists( 'Fxm_After_Setup_Theme' ) ) {
 					'search-form',
 					'gallery',
 					'caption',
+					'comment-form',
+					'comment-list',
 					'style',
 					'script',
 				)
@@ -130,15 +132,15 @@ if ( ! class_exists( 'Fxm_After_Setup_Theme' ) ) {
 			);
 
 			// Add theme support for Custom Logo.
-			add_theme_support(
-				'custom-logo',
-				array(
-					'width'       => 180,
-					'height'      => 60,
-					'flex-width'  => true,
-					'flex-height' => true,
-				)
-			);
+			// add_theme_support(
+			// 	'custom-logo',
+			// 	array(
+			// 		'width'       => 180,
+			// 		'height'      => 60,
+			// 		'flex-width'  => true,
+			// 		'flex-height' => true,
+			// 	)
+			// );
 
 			// Customize Selective Refresh Widgets.
 			add_theme_support( 'customize-selective-refresh-widgets' );

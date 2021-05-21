@@ -1,11 +1,14 @@
 <?php
 /**
+ * @package FreshXMind
+ * @author Cato
+ * @since 1.0.0
  * @todo RENAME AND FIGURE A BETTER WAY TO INCLUDE THIS GENERIC
  * Register Custom Woocommerce Product Taxonomy
  */
 
 if (class_exists('WooCommerce')) {
-  function freshxmind_custom_taxonomy_item()
+  function fxm_custom_taxonomy_item()
   {
 
     $labels = array(
@@ -35,5 +38,5 @@ if (class_exists('WooCommerce')) {
     );
     register_taxonomy('item', 'product', $args);
   }
-  add_action('init', 'freshxmind_custom_taxonomy_item', 0);
+  add_action('init', 'fxm_custom_taxonomy_item', 0);
 }

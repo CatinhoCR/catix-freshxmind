@@ -1,0 +1,116 @@
+.container {
+  @include container();
+
+  &--sm {
+    @include container(sm);
+  }
+
+  &--md {
+    @include container(md);
+  }
+
+  &--lg {
+    @include container(lg);
+  }
+
+  &--xl {
+    @include container(xl);
+  }
+
+  &--xxl {
+    @include container(xxl);
+  }
+
+  &--full {
+    @include container(full);
+  }
+
+  // CSS Grid
+  &__grid {
+    display: grid;
+    // TODO: responsiveness
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px 10px;
+
+    @include break-min($sm) {
+      grid-template-columns: repeat(auto-fit, minmax(49%, 1fr));
+    }
+
+    @include break-min($md) {
+      grid-template-columns: repeat(auto-fit, minmax(24%, 1fr));
+      gap: 20px 20px;
+    }
+
+    @include break-min($lg) {
+      grid-template-columns: repeat(auto-fit, minmax(19%, 1fr));
+    }
+
+    @include break-min($xxl) {
+      grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
+    }
+
+    &-2c {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+      gap: 20px 20px;
+    }
+  }
+}
+
+// CSS Flexbox
+.row {
+  @include row();
+
+  > .col,
+  > [class^='col-'] {
+    @include col();
+  }
+
+  @for $i from 1 through $grid-columns {
+    > .col-#{$i} {
+      @include col($sm, $i);
+    }
+
+    > .col-fifth {
+      @include col($xxl, 2.4);
+    }
+  }
+
+  @each $bp, $size in $breakpoints {
+    > .col-#{$bp} {
+      @include col($size);
+    }
+
+    @for $i from 1 through $grid-columns {
+      > .col-#{$bp}-#{$i} {
+        @include make-col($i, $size);
+      }
+
+      > .offset-#{$bp}-#{$i} {
+        @include make-col-offset($i, $size);
+      }
+    }
+
+    > .col-#{$bp}-fifth {
+      @include make-col(2.4, $size);
+    }
+  }
+}
+
+@include break-min($md) {
+  .row {
+    &--align-center {
+      @include row(center);
+    }
+
+    &--justify-center {
+      @include row(flex-start, center);
+    }
+
+    &.row--justify-center {
+      &.row--align-center {
+        @include row(center, center);
+      }
+    }
+  }
+}
