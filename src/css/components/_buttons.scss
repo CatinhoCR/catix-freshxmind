@@ -1,0 +1,173 @@
+.button {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  color: $white;
+  background-color: $red;
+  border: 1px solid $red;
+  height: rem(42);
+  // border-radius: rem(4);
+  padding: rem(8) rem(30);
+  text-transform: capitalize;
+  display: inline-flex;
+  font-size: rem(14);
+  line-height: 1;
+  font-weight: $bold-weight;
+  letter-spacing: 0;
+  text-decoration: none;
+  align-self: center;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  transition: all 0.2s ease-in-out;
+  flex-shrink: 0;
+  justify-content: space-between;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($red, 10%);
+    border-color: darken($red, 10%);
+    color: $white;
+  }
+
+  &--hov {
+    &-lighten {
+      &:hover {
+        background-color: scale-color($red, $lightness: 20%);
+        border-color: scale-color($red, $lightness: 20%);
+      }
+    }
+  }
+
+  // TODO: Focus states
+  &:focus {
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+  }
+
+  &--sws {
+    box-shadow: none;
+    border: 1px solid $red;
+  }
+
+  &__text {
+    color: inherit;
+    font-weight: inherit;
+    text-transform: inherit;
+  }
+
+  &__icon {
+    width: rem(16);
+    height: rem(16);
+    font-size: rem(16);
+  }
+
+  // Small Sized Button
+  &--sm {
+    padding: rem(12) rem(16);
+  }
+
+  // Large Sized Button
+  &--lg {
+    padding: rem(13) rem(30);
+    height: rem(52);
+    font-size: rem(15);
+  }
+
+  // Pill Shaped Buttons
+  &--pill {
+    border-radius: rem(21);
+
+    &.button {
+      &--lg {
+        border-radius: rem(26);
+      }
+    }
+  }
+
+  // Circle Shaped Buttons
+  &--circle {
+    border-radius: 50%;
+    width: rem(36);
+    height: rem(36);
+    padding: 0;
+    justify-content: center;
+
+    &:focus::before {
+      border-radius: 50%;
+    }
+
+    &.button {
+      &--md {
+        width: 48px;
+        height: 48px;
+
+        .button {
+          &__icon {
+            width: rem(18);
+            height: rem(18);
+            font-size: rem(18);
+          }
+        }
+      }
+
+      &--lg {
+        width: 60px;
+        height: 60px;
+
+        .button {
+          &__icon {
+            width: rem(20);
+            height: rem(20);
+            font-size: rem(20);
+          }
+        }
+      }
+
+      &--xl {
+        width: 80px;
+        height: 80px;
+
+        .button {
+          &__icon {
+            width: rem(24);
+            height: rem(24);
+            font-size: rem(24);
+          }
+        }
+      }
+    }
+
+    &:hover {
+      transform: scale($circle-button-scale);
+    }
+  }
+
+  // Button's & Icons
+  &--with-icon {
+    .button {
+      &__text {
+        margin-left: 0;
+        margin-right: rem(10);
+        transform: translateX(-10px);
+      }
+
+      &__icon {
+        margin-left: rem(20);
+        transform: translateX(10px);
+      }
+    }
+  }
+
+  // TODO: Icons colors and props
+  &--outline {
+    background-color: transparent;
+    color: $red;
+
+    &:hover {
+      background-color: $red;
+      color: $white;
+    }
+  }
+  // TODO: Buttons with Text-Icon
+  // TODO: Circle buttons
+}

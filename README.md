@@ -1,28 +1,20 @@
-# CATIX Fresh X Mind
+# Fresh X Mind Wordpress Starter Theme
 
-Custom Wordpress Theme made with a modern build workflow, using Node, Webpack, ES6+, SCSS and PHP 8. This is based off from my own [custom starter theme](https://github.com/CatinhoCR/starter-freshxmind-theme).
-For reference, the previous version of the theme can be found [here](https://github.com/CatinhoCR/glowing-freshxmind-theme).
+FreshXMind is a Wordpress boilerplate or starter theme, to help you quickly kickstart custom theming. It's compliant to all the latest Wordpress standards and guidelines. Uses **Webpack** for hot reloading during development, and production build assets too, using **SCSS** and **modern JS** (EcmaScript) with Babel.
 
-- [CATIX Fresh X Mind](#catix-fresh-x-mind)
-  - [Dependencies](#dependencies)
-    - [Installation](#installation)
-    - [Run Webpack dev server with live reload](#run-webpack-dev-server-with-live-reload)
-    - [Compile assets for production](#compile-assets-for-production)
-  - [Theme Structure](#theme-structure)
-    - [Inc Folder](#inc-folder)
-    - [Blocks and Components](#blocks-and-components)
-    - [Styles](#styles)
-    - [Javascript](#javascript)
+**Built in common functions** to extend theme core features and **hooks** to make development easier, by simply plugging your template parts to the corresponding functions and actions, or editing the already existing ones to fit your needs. This makes it extendable and compatible with child themes too.
 
 ## Dependencies
 
-- PHP 8 (7 is deprecated now)
+- PHP 7+
 - Node 8+
 - NPM 5+
 - Yarn
-- ACF PRO Wordpress Plugin
+- ACF PRO Wordpress Plugin (Non ACF version incoming)
 
-### Installation
+Note: We're not including the ACF plugin, you'll need your own license to use it.
+
+## Installation
 
 Clone repo into your `wp-content/themes` folder and run
 
@@ -36,42 +28,26 @@ If you'd like to use `npm` instead of `Yarn`, simply delete the `yarn.lock` in t
 
 ### Compile assets for production
 
-- `npm run build` (To do here add CI, deployment, etc)
+- `npm run build` (To do here add CI, deployment, etc).
 
 ## Theme Structure
 
-The theme uses several folders to organize things in a modular way, here's the main folders to look at:
+Very briefly, the **template files** used to render content **execute functions** (you'll notice them all around, for instance in `header.php`).
+These functions are simple `do_action()` **hooks** (located at `/inc/core/theme-hooks.php`).
+These Hooks are calling functions defined as **Template Parts** methods (Look at `inc/template-parts/` for the corresponding methods)
 
-- `acf-json`: Automatically generated files to keep **ACF fields** in sync and backed up.
-- `build-tasks`: Webpack's config files.
-- `images`: SVG images/icons used by theme, served as PHP for usage with WP's built-in `get_template_part` [function].
-- `inc`: Theme's main functionality here, our `functions.php` imports these files for easier maintenance and extending. [Further details in it's own section](#inc-Folder).
-- `resources`: All the theme's *partials* here. Includes [Blocks & Components](#blocks-and-components), content wrappers, etc.
-- `src`: Includes theme's [Styles](#styles), [JavaScript](#javascript) and web-fonts.
-- `templates`: All of the theme's main templates, for different page layouts to be selected in the WP's page edit built-in menu.
-- `woocommerce`: Everything related to WooCommerce extending, including hooks and template parts.
+This is done for 2 main reasons:
 
-[function]: https://developer.wordpress.org/reference/functions/get_template_part/ "Get Template Part Function Docs"
+- If the theme was to grow into a standalone solution it would make it super easy to re-write template parts by hooking into the right action from a child theme
+- It keeps the templates code so much cleaner and easier to read, maintain and update where it needs to be.
 
-### Inc Folder
+**This is the way.**
 
-Includes all the [theme functions] included in the main `functions.php` file.
-Things like the initial WP theme's setup (`inc/theme-setup.php`), theming configurations (`inc/configs`), template tags/functions (`inc/methods`), among others go here.
+Note: For super simple projects, you could skip this step and simply do `get_template_part()` functions directly from your templates, or just throw all that messy code in that single file _(yikes)_.
 
-- `acf-framework`: Custom extends and hooks to ACF Pro plugin's functionality.
-- `classes`: Includes custom PHP Classes to be used throughout the theme. Things like [Walkers]
+Here's a quick overview and walkthrough of how the theme's organized and the folder structure. **Look at `functions.php` and the `/inc/` folder**
 
-[theme functions]: https://developer.wordpress.org/themes/basics/theme-functions
-[Walkers]: https://developer.wordpress.org/reference/classes/walker/
-
-### Blocks and Components
-
-Pages are divided into `blocks` which are full width elements/containers that can exist on their own like a hero.
-Blocks can contain multiple `components` like cards or buttons. You can see this structure applied for PHP (`resources`) and styles (`src/css`).
-
-### Styles
-
-File Structure and workflow based and **adapted** from [SASS Guidelines] and the [7:1 design pattern].
+## Styles
 
 - `Abstracts`: Variables, functions, mixins, helpers. A good way to see this is, it should not print out any CSS code if compiled on it's own.
 - `Base`: Settings, tools and helpers. Contains global styles, normalizers and utility classes.
@@ -81,17 +57,57 @@ File Structure and workflow based and **adapted** from [SASS Guidelines] and the
 - `Pages`: Styles specific to pages like the home page
 - `Helpers`: Overrides to colors classes and spacings, etc.
 
-<!--
-  @todo:
-  Make branch in starter repo for a 5:1 pattern
-  https://matthewelsom.com/blog/simple-scss-playbook.html
+## Debugging
+
+Make sure to add the following at the bottom of your `wp-config.php` file:
+
+```php
+define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_DISPLAY', true );
+define( 'WP_DEBUG_LOG', true );
+```
+
+_this enables the creation and population of a `debug.log` file in your `wp-content` directory (look at the helper functions in `/inc/common/helper-functions.php` if curious on further implementation)_
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+To be added soon...
+<!-- Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
+_For more examples, please refer to the [Documentation](https://cato506.com/freshxmind)_
 -->
 
-[SASS Guidelines]: https://sass-guidelin.es "Hugo Giraudel's SASS Guidelines"
-[7:1 design pattern]: https://github.com/HugoGiraudel/sass-boilerplate "7:1 design pattern"
+<!-- ROADMAP -->
+## Roadmap
 
-### Javascript
+See the [open issues](https://github.com/CatinhoCR/catix-freshxmind/issues) for a list of proposed features (and known issues).
 
-Uses the same structure as the Blocks & Components resources. If a functionality is for a block, then add it in the `src/js/blocks` folder.
+<!-- CONTRIBUTING -->
+## Contributing
 
-Docs to be extended further eventually.
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<!-- CONTACT -->
+## Contact
+
+Andrés Castillo - [@cato_506](https://twitter.com/cato_506) - [email](mailto:hello@cato506.com?subject=[GitHub]%20FreshX%20Mind%20-)
+
+Project Link: [https://github.com/CatinhoCR/catix-freshxmind](https://github.com/CatinhoCR/catix-freshxmind)
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+
+- [CATO](https://cato506.com)
+- [Underscores](https://underscores.me/)

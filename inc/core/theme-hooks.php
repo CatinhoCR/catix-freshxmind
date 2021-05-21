@@ -168,12 +168,12 @@ function fxm_header_bottom()
  */
 function fxm_content_before()
 {
-  do_action('fxm_content_before');
+  do_action('fxm_before_main_content');
 }
 
 function fxm_content_after()
 {
-  do_action('fxm_content_after');
+  do_action('fxm_after_main_content');
 }
 
 function fxm_content_top()

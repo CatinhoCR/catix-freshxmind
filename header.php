@@ -49,5 +49,5 @@ if ( ! defined( 'ABSPATH' ) ) {
    *
    * @hooked themename_wrapper_start - 10 (outputs opening divs for the content)
    */
-  do_action('fxm_before_main_content');
+  fxm_content_before();
   ?>

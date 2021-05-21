@@ -2,3 +2,25 @@
 @import 'abstracts/variables';
 @import 'abstracts/functions';
 @import 'abstracts/mixins';
+
+// Base (Normalizer, Globals, Typography)
+@import 'base/normalize';
+@import 'base/typography';
+@import 'base/grid';
+@import 'base/utils';
+@import 'base/globals';
+
+// Components (smaller partials used inside of blocks - divided for ease of reference)
+@import 'components/buttons';
+
+// Blocks (standalone parts which are direct children of a page)
+@import 'blocks/back-to-top';
+
+// Pages (styles specific to a certain template/page)
+
+// Layout
+@import 'layout/theme';
+
+// Helpers and Overrides (Inspired in tailwind.css)
+@import 'helpers/color-classes';
+@import 'helpers/spacing-classes';

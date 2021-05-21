@@ -2,7 +2,7 @@
 
 /**
  *
- * @package freshxmind
+ * @package fxm
  * @author Cato
  * @since 1.0.0
  *
@@ -20,7 +20,7 @@ $template_parts_includes = [
 
 foreach ($template_parts_includes as $file) {
   if (!$filepath = locate_template($file)) {
-    trigger_error(sprintf(__('Error locating %s for inclusion', 'freshxmind'), $file), E_USER_ERROR);
+    trigger_error(sprintf(__('Error locating %s for inclusion', 'fxm'), $file), E_USER_ERROR);
   }
   require_once $filepath;
 }

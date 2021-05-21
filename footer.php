@@ -14,7 +14,7 @@
  *
  * @hooked themename_wrapper_end - 10 (outputs closing divs for the content)
  */
-do_action('fxm_after_main_content');
+fxm_content_after();
 
 do_action('fxm_footer_content');
 ?>

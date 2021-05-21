@@ -1,0 +1,30 @@
+.back-top {
+  z-index: z('notice-bars');
+  position: fixed;
+  right: rem(20);
+  bottom: rem(20);
+  color: lighten($red, 10);
+  background-color: $warm-white;
+  border: 2px solid;
+  border-color: lighten($red, 20);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+
+  &__icon {
+    font-size: rem(20);
+  }
+
+  &:hover {
+    border-color: darken($red, 10);
+    background-color: darken($red, 10);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.2);
+    color: lighten($red, 20);
+
+    &.back-top {
+      &__icon {
+        font-size: rem(28);
+      }
+    }
+  }
+}

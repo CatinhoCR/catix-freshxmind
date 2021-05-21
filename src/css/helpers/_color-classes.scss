@@ -1,0 +1,91 @@
+@each $key, $value in $theme-colors {
+  .text-#{$key} {
+    color: $value !important;
+  }
+
+  .bg-#{$key} {
+    background-color: $value !important;
+  }
+
+  .border-color-#{$key} {
+    border-color: $value !important;
+  }
+
+  .fill-#{$key} {
+    fill: $value !important;
+  }
+
+  .button {
+    &--#{$key} {
+      background-color: $value;
+      border-color: $value;
+
+      &:hover {
+        background-color: darken($value, 10%);
+        border-color: darken($value, 10%);
+      }
+
+      // color of focus outline
+      &:focus::before {
+        border-color: $value;
+      }
+
+      &.button {
+        &--hov {
+          &-lighten {
+            &:hover {
+              background-color: scale-color($value, $lightness: 20%);
+              border-color: scale-color($value, $lightness: 20%);
+            }
+          }
+        }
+
+        &--outline {
+          background-color: transparent;
+          color: $value;
+
+          .fxm-icon {
+            color: $value;
+
+            path {
+              fill: $value;
+            }
+          }
+
+          &:hover {
+            border-color: $value;
+            background-color: $value;
+            color: transparent;
+
+            .fxm-icon {
+              color: transparent;
+
+              /* stylelint-disable-next-line */
+              path {
+                fill: transparent;
+              }
+            }
+          }
+
+          &-reverse {
+            background-color: $value;
+            color: $white;
+
+            &:hover {
+              background-color: transparent;
+              color: $value;
+            }
+          }
+        }
+      }
+    }
+
+    &--with-icon-#{$key} {
+      .ui-icon {
+        path {
+          fill: $value;
+        }
+      }
+    }
+  }
+}
