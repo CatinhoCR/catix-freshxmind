@@ -33,7 +33,12 @@ if ( ! defined( 'ABSPATH' ) ) {
   <?php wp_body_open(); ?>
   <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'fxm'); ?></a>
 
-  <header class="site-header" id="siteHeader">
+  <?php fxm_header_before(); ?>
+
+  <?php fxm_main_site_header(); ?>
+
+  <?php fxm_header_after(); ?>
+  <!-- <header class="site-header" id="siteHeader"> -->
     <?php
     // @todo
     // if (get_field('show_top_bar', 'option')) :
@@ -41,7 +46,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     // endif;
     ?>
     <?php // get_template_part('/resources/blocks/custom', 'nav'); ?>
-  </header>
+  <!-- </header> -->
 
   <?php
   /**

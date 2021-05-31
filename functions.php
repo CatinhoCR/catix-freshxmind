@@ -38,6 +38,7 @@ $includes = [
   'inc/theme-setup.php',
   'inc/core.php',
   'inc/template-parts.php',
+  'inc/plugin-compatibility.php'
   // 'inc/compatibility-plugins.php',
   // 'inc/methods.php',
   // 'inc/classes.php',
