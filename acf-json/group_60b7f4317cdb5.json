@@ -1,0 +1,609 @@
+{
+    "key": "group_60b7f4317cdb5",
+    "title": "Content Settings - Global",
+    "fields": [
+        {
+            "key": "field_60b7f4c961c58",
+            "label": "General",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f8d50e6247a2",
+            "label": "Posts Per Page",
+            "name": "posts_per_page",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 2,
+            "max": 20,
+            "step": ""
+        },
+        {
+            "key": "field_5fae3694ccb96",
+            "label": "Show Back to Top Button",
+            "name": "show_back_to_top_button",
+            "type": "true_false",
+            "instructions": "Check to Display Back to Top button across all website",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5fae367eccb95",
+            "label": "Notice Banners",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f9f4537b56aa",
+            "label": "Show Top Bar",
+            "name": "show_top_bar",
+            "type": "true_false",
+            "instructions": "If checked, the site will show an additional top bar navigation menu, on top of the regular navigation menu.\r\nThe items shown in there are set in the Appearance>Menus page, in the \"Utilities\" Menu.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_603606d39fc3b",
+            "label": "Page Google Tag",
+            "name": "page_google_tag",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5fa2603dde464",
+            "label": "Top Banners",
+            "name": "top_banners",
+            "type": "repeater",
+            "instructions": "The first banner that meets user permissions will be displayed. Order this list accordingly.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5fa25f5034fcf",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Top Banner",
+            "sub_fields": [
+                {
+                    "key": "field_5fa25f5034fcf",
+                    "label": "Text Content",
+                    "name": "text_content",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 128
+                },
+                {
+                    "key": "field_5fc0d56da848c",
+                    "label": "Mobile Text Content",
+                    "name": "mobile_text_content",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 80
+                },
+                {
+                    "key": "field_5fa25f6934fd0",
+                    "label": "Link URL",
+                    "name": "link_url",
+                    "type": "text",
+                    "instructions": "Optional URL, if added the entire Top Bar will be clickable.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5fa25f8334fd1",
+                    "label": "Link Target",
+                    "name": "link_target",
+                    "type": "select",
+                    "instructions": "If (New Tab) is selected, link will open in a new browser tab",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5fa25f6934fd0",
+                                "operator": "!=empty"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "self": "Same Tab",
+                        "blank": "New Tab"
+                    },
+                    "default_value": "self",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5fb62212376bd",
+                    "label": "Background Color",
+                    "name": "background_color",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "mid-blue": "Mid Blue",
+                        "dark-blue": "Dark Blue",
+                        "red": "Red",
+                        "label-grey": "Dark Grey",
+                        "deep-teal": "Deep Teal"
+                    },
+                    "default_value": "mid-blue",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5fb622c7376be",
+                    "label": "User Role Visibility",
+                    "name": "user_role_visibility",
+                    "type": "user",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "role": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "array"
+                }
+            ]
+        },
+        {
+            "key": "field_5fba6a40ee1c0",
+            "label": "Show Bottom Bar",
+            "name": "show_bottom_bar",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5fba6acd379ed",
+            "label": "Bottom Banners",
+            "name": "bottom_banners",
+            "type": "repeater",
+            "instructions": "The first banner that meets user permissions will be displayed. Order this list accordingly.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5fa25f5034fcf",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Bottom Banner",
+            "sub_fields": [
+                {
+                    "key": "field_5fba6acd379ee",
+                    "label": "Text Content",
+                    "name": "text_content",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 128
+                },
+                {
+                    "key": "field_5fc0d522a848b",
+                    "label": "Mobile Text Content",
+                    "name": "mobile_text_content",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 80
+                },
+                {
+                    "key": "field_5fba6acd379ef",
+                    "label": "Link URL",
+                    "name": "link_url",
+                    "type": "text",
+                    "instructions": "Optional URL, if added the entire Top Bar will be clickable.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5fba6acd379f0",
+                    "label": "Link Target",
+                    "name": "link_target",
+                    "type": "select",
+                    "instructions": "If (New Tab) is selected, link will open in a new browser tab",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5fba6acd379ef",
+                                "operator": "!=empty",
+                                "value": ""
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "self": "Same Tab",
+                        "blank": "New Tab"
+                    },
+                    "default_value": "self",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5fba6acd379f1",
+                    "label": "Background Color",
+                    "name": "background_color",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "mid-blue": "Mid Blue",
+                        "dark-blue": "Dark Blue",
+                        "red": "Red",
+                        "label-grey": "Dark Grey",
+                        "deep-teal": "Deep Teal",
+                        "white": "White"
+                    },
+                    "default_value": "mid-blue",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5fba6acd379f2",
+                    "label": "User Role Visibility",
+                    "name": "user_role_visibility",
+                    "type": "user",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "role": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "array"
+                }
+            ]
+        },
+        {
+            "key": "field_5fb65e0b3735c",
+            "label": "Show Cookie banner",
+            "name": "show_cookie_banner",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5fb620db376b5",
+            "label": "Cookie Banner",
+            "name": "cookie_banner",
+            "type": "group",
+            "instructions": "UNDER CONSTRUCTION! Not yet available for usage. Scheduled Release: Phase 2.5 January.\r\nCookie Banner Settings",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5fb620db376b6",
+                    "label": "Text Content",
+                    "name": "text_content",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 128
+                },
+                {
+                    "key": "field_5fb62147376b9",
+                    "label": "Policy Page Link",
+                    "name": "policy_page_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5fb62164376ba",
+                    "label": "Accept Button Label",
+                    "name": "accept_button_label",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5fb62175376bb",
+                    "label": "Banner Background Color",
+                    "name": "banner_background_color",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "black": "Black",
+                        "blue": "Blue",
+                        "red": "Red",
+                        "warm-white": "Warm White"
+                    },
+                    "default_value": "black",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5fb621a8376bc",
+                    "label": "Banner Text Color",
+                    "name": "banner_text_color",
+                    "type": "select",
+                    "instructions": "Make sure the selection created enough contrast with the background so it's easily readable by users !",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "white": "White",
+                        "black": "Black"
+                    },
+                    "default_value": "white",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-global-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1622683173
+}

@@ -2,7 +2,10 @@
 
 /**
  * Theme Hook Alliance hook stub list.
+ * All the actions here are registered in the 'inc/template-parts' folder
+ * Each block of actions' comment will only reference the file where it's at within that folder
  *
+ * @see 'inc/template-parts/[...]' for the functions registering the actions
  * @see  https://github.com/zamoose/themehookalliance
  *
  * @package     FreshXMind
@@ -101,6 +104,7 @@ add_filter('current_theme_supports-fxm_hooks', 'fxm_current_theme_supports', 10,
  * HTML <html> hook
  * Special case, useful for <DOCTYPE>, etc.
  * $fxm_supports[] = 'html;
+ * @todo
  */
 function fxm_html_before()
 {
@@ -110,6 +114,7 @@ function fxm_html_before()
 /**
  * HTML <body> hooks
  * $fxm_supports[] = 'body';
+ * @see wrappers.php
  */
 function fxm_body_top()
 {

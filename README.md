@@ -2,6 +2,18 @@
 
 FreshXMind is a Wordpress boilerplate or starter theme, to help you quickly kickstart custom theming. It's compliant to all the latest Wordpress standards and guidelines. Uses **Webpack** for hot reloading during development, and production build assets too, using **SCSS** and **modern JS** (EcmaScript) with Babel.
 
+## To Do
+
+Merge ant changes here with the previous starter version at catix-fxm. Keep just one starter version and base off from that for actual AyP work.
+
+README file needs to include a list of features built in the theme and docs on them, things like:
+
+- Color settings
+- Logos
+- Theme Hooks and template parts
+- Styles
+- ACF Pro Custom field groups built-in and how to use/update them
+
 **Built in common functions** to extend theme core features and **hooks** to make development easier, by simply plugging your template parts to the corresponding functions and actions, or editing the already existing ones to fit your needs. This makes it extendable and compatible with child themes too.
 
 ## Dependencies
