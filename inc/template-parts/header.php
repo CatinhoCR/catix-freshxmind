@@ -13,7 +13,51 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Wrapper Start
+ * Head Top content
+ */
+if (!function_exists('fxm_head_top_content')) {
+	function fxm_head_top_content()
+	{
+		// get_template_part('partials/head/head', 'top');
+	}
+	add_action('fxm_head_top', 'fxm_head_top_content', 10);
+}
+
+/**
+ * Add Google Analytics Support and Snippet to Head
+ *
+ * @return void
+ * @since  1.0
+ * @author CATO
+ */
+if (!function_exists('fxm_head_gtag_support')) {
+	function fxm_head_gtag_support()
+	{
+		if (!get_field('add_google_analytics_tag', 'option')) {
+			return;
+		}
+		$gtag_id = get_field('google_analytics_tag_id', 'option');
+		get_template_part('partials/head/google', 'tag', $gtag_id);
+	}
+	add_action('fxm_head_bottom', 'fxm_head_gtag_support', 10);
+}
+
+
+/**
+ *
+ */
+if (!function_exists('fxm_head_css_vars_support')) {
+  function fxm_head_css_vars_support()
+  {
+    $colors_site = fxm_get_theme_colors();
+		get_template_part('partials/head/custom', 'styles', $colors_site);
+  }
+  add_action('fxm_head_bottom', 'fxm_head_css_vars_support', 15);
+}
+
+
+/**
+ * Content before Header Tag
  *
  * @return void
  * @since  1.0
@@ -28,7 +72,7 @@ if (!function_exists('fxm_header_before_content')) {
 }
 
 /**
- * Wrapper Start
+ * Content After Header Tag
  *
  * @return void
  * @since  1.0
@@ -87,5 +131,4 @@ if (!function_exists('fxm_main_site_header')) {
 		];
 		get_template_part('partials/header/site', 'header', $settings);
 	}
-	// add_action('fxm_header_bottom', 'fxm_header_bottom_content', 10);
 }

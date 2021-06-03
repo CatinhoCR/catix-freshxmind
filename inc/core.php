@@ -24,7 +24,10 @@ $core_includes = [
   'inc/core/enqueue-assets.php',
   // Custom Theme Actions and Hooks
   'inc/core/theme-hooks.php',
-  // 'inc/core/class-.php',
+  // Custom Post Types, Taxonomies, Widgets, etc
+  // 'inc/core/post_types.php',
+  // 'inc/core/taxonomies.php',
+  // 'inc/core/sidebars.php',
 ];
 
 foreach ($core_includes as $file) {

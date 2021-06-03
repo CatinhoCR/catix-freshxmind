@@ -12,6 +12,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+
+/**
+ * Main Site Header Wrapper Function
+ *
+ * @return void
+ * @since  1.0
+ * @author CATO
+ **/
+if (!function_exists('fxm_main_site_footer')) {
+	function fxm_main_site_footer()
+	{
+		// $show_toolbar = (get_field('show_top_toolbar', 'option')) ? true : false;
+		// $settings = [
+		// 	'toolbar' => $show_toolbar
+		// ];
+		// get_template_part('partials/footer/site', 'footer', $settings);
+	}
+}
+
 /**
  * Subscribe Section Footer
  *

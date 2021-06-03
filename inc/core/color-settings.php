@@ -60,25 +60,3 @@ if (!function_exists('fxm_print_css_variables')) {
     echo '--fm-' . esc_attr($key) . '-color: ' . esc_attr($color) . ';';
   }
 }
-
-/**
- *
- */
-if (!function_exists('fxm_theme_color_vars')) {
-  function fxm_theme_color_vars()
-  {
-    $colors_site = fxm_get_theme_colors();
-?>
-    <style type="text/css" media="screen">
-      :root {
-        <?php
-        foreach ($colors_site as $key => $color) {
-          fxm_print_css_variables($key, $color);
-        }
-        ?>
-      }
-    </style>
-  <?php
-  }
-  add_action('fxm_print_theme_colors', 'fxm_theme_color_vars');
-}

@@ -213,10 +213,10 @@
             "endpoint": 0
         },
         {
-            "key": "field_5f3e32e87406c",
-            "label": "Email",
-            "name": "email",
-            "type": "email",
+            "key": "field_60b84c7235813",
+            "label": "Show Email Contact",
+            "name": "show_email_contact",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -225,16 +225,43 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "message": "",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5f3e32e87406c",
+            "label": "Email",
+            "name": "email",
+            "type": "email",
+            "instructions": "Add main website's contact email for support",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60b84c5835812",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "support@cato506.com",
             "placeholder": "",
             "prepend": "",
             "append": ""
         },
         {
-            "key": "field_5f3e328f7406b",
-            "label": "Phone",
-            "name": "phone",
-            "type": "number",
+            "key": "field_60b84c5835812",
+            "label": "Show Phone Contact",
+            "name": "show_phone_contact",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -243,18 +270,70 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "2222-2222",
+            "message": "",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5f3e328f7406b",
+            "label": "Phone Display Text",
+            "name": "phone_display_text",
+            "type": "text",
+            "instructions": "Add your default main company's contact phone number",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60b84c5835812",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "(506) 8396-6464",
+            "placeholder": "",
             "prepend": "",
             "append": "",
-            "min": 10000000000,
-            "max": 99999999999,
-            "step": ""
+            "maxlength": ""
+        },
+        {
+            "key": "field_60b84cb035814",
+            "label": "Phone Link Ready",
+            "name": "phone_link_ready",
+            "type": "text",
+            "instructions": "Add your default main company's contact phone number in computer readable, dial ready format, so user can click on phone link to call.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60b84c5835812",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "+150683966464",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_6050248f7e8f1",
-            "label": "Address",
-            "name": "address",
+            "label": "Address First Line",
+            "name": "address_first_line",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -264,11 +343,49 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "Curridabat, San José",
             "placeholder": "",
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_60b84d4e35815",
+            "label": "Address Second Line",
+            "name": "address_second_line",
+            "type": "text",
+            "instructions": "Add your address second line",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Costa Rica",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_60b84d6a35816",
+            "label": "Add Map Location",
+            "name": "add_map_location",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
             "key": "field_605025b97e8f2",
@@ -277,7 +394,15 @@
             "type": "google_map",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60b84d6a35816",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -317,7 +442,7 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
+            "collapsed": "field_5fb0e558e641a",
             "min": 0,
             "max": 0,
             "layout": "block",
@@ -380,33 +505,6 @@
             ]
         },
         {
-            "key": "field_60b82e40a3cb8",
-            "label": "Google Analytics Tag Info",
-            "name": "google_analytics_tag_info",
-            "type": "text",
-            "instructions": "Copy and paste your gtag brand information here, If unclear on what this is better not change it and ask your web developer or support for help.",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_603606b99fc3a",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_5fbffeef0f9ad",
             "label": "Google Analytics Settings",
             "name": "",
@@ -436,10 +534,37 @@
                 "id": ""
             },
             "message": "",
-            "default_value": 0,
+            "default_value": 1,
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_60b82e40a3cb8",
+            "label": "Google Analytics Tag ID",
+            "name": "google_analytics_tag_id",
+            "type": "text",
+            "instructions": "Copy and paste your gtag brand information here, If unclear on what this is better not change it and ask your web developer or support for help.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_603606b99fc3a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "G-P1NGGYYW50",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -459,5 +584,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1622684042
+    "modified": 1622693501
 }
