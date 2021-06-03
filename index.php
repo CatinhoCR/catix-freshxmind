@@ -19,13 +19,6 @@ if (!defined('ABSPATH')) {
 }
 
 get_header();
-if (is_home() && !is_front_page()) :
-?>
-	<h2>Blog</h2>
-<?php
-else :
-?>
-	<h2>Otro</h2>
-<?php
-endif;
+
+
 get_footer();

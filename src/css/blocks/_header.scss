@@ -1,0 +1,85 @@
+.header {
+  &--main {
+    height: $nav-height-mobile;
+    background-color: $white;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &--sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: z('navigation');
+  }
+
+  &__inner {
+    @include container(lg);
+    @include flex-children(center, space-between);
+  }
+
+  &__brand {
+    max-width: rem(100);
+    flex-basis: rem(100);
+
+    .full {
+      display: none;
+    }
+
+    .mini {
+      display: block;
+    }
+  }
+
+  &__toolbar {
+    display: none;
+  }
+
+  &__menu {
+    @include flex-children(center, flex-end);
+    flex-grow: 2;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__link-nav {
+    @include flex-children(center, flex-start);
+    transition: all 0.3s ease;
+    padding: rem(10) rem(16);
+    color: $label-grey;
+    font-size: rem(16);
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+
+@include break-min($md) {
+  .header {
+    &--main {
+      height: $nav-height-desktop;
+      max-height: $nav-height-desktop;
+      transition: all 0.4s ease;
+    }
+
+    &__toolbar {
+      background-color: $warm-black;
+      height: $toolbar-height;
+      display: block;
+    }
+
+    &__menu {
+      @include flex-children(center, flex-end);
+      position: relative;
+    }
+
+    &__item-nav {
+      height: 100%;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      overflow: hidden;
+    }
+  }
+}

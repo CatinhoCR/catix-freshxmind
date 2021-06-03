@@ -38,15 +38,6 @@ if ( ! defined( 'ABSPATH' ) ) {
   <?php fxm_main_site_header(); ?>
 
   <?php fxm_header_after(); ?>
-  <!-- <header class="site-header" id="siteHeader"> -->
-    <?php
-    // @todo
-    // if (get_field('show_top_bar', 'option')) :
-    //   get_template_part('resources/blocks/site-banners/notice', 'banners', ['position' => 'top']);
-    // endif;
-    ?>
-    <?php // get_template_part('/resources/blocks/custom', 'nav'); ?>
-  <!-- </header> -->
 
   <?php
   /**

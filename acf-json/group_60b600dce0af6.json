@@ -1,0 +1,311 @@
+{
+    "key": "group_60b600dce0af6",
+    "title": "Layout Settings - Branding",
+    "fields": [
+        {
+            "key": "field_6038a9b23edc5",
+            "label": "Website Colors",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_60b831b4cb871",
+            "label": "Dark or Light Theme",
+            "name": "dark_or_light_theme",
+            "type": "button_group",
+            "instructions": "Select wether you want the theme layout to be a light background with dark text, or dark background with light colored text.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "light": "Light",
+                "dark": "Dark"
+            },
+            "allow_null": 0,
+            "default_value": "light",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_6038ca5f39012",
+            "label": "Theme Branding Colors",
+            "name": "theme_branding_colors",
+            "type": "group",
+            "instructions": "Set the different colors used throughout the website to change them to your brand's colors.\r\nThese colors are used for things like button colors, borders, and other layout things around the site. You'll find the option to select your preferred color at some of the different blocks when editing a page, make sure to add the colors wanted for those in here and match your selection in the blocks.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6038a9c93edc6",
+                    "label": "Main Color",
+                    "name": "main_color",
+                    "type": "color_picker",
+                    "instructions": "Defult color is: # (In case you want to go back)",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#9e3226"
+                },
+                {
+                    "key": "field_6038aa913edc7",
+                    "label": "Secondary Color",
+                    "name": "secondary_color",
+                    "type": "color_picker",
+                    "instructions": "Defult color is: # (In case you want to go back)",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#070a17"
+                },
+                {
+                    "key": "field_6038bdb0caba1",
+                    "label": "Third Color",
+                    "name": "third_color",
+                    "type": "color_picker",
+                    "instructions": "Defult color is: # (In case you want to go back)",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#054880"
+                },
+                {
+                    "key": "field_6038bdf7caba2",
+                    "label": "Fourth Color",
+                    "name": "fourth_color",
+                    "type": "color_picker",
+                    "instructions": "Defult color is: # (In case you want to go back)",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#074f67"
+                }
+            ]
+        },
+        {
+            "key": "field_603a18865df03",
+            "label": "Theme Layout Colors",
+            "name": "theme_layout_colors",
+            "type": "group",
+            "instructions": "Colors set here will override the defaults built in with the theme.\r\nThe Main color is used for things like the main buttons, the navigation bar hover\/active states, hamburger icon color, hamburger menu background color, etc.\r\nThe secondary color is used for hover states of those and also other buttons, etc.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6038c98bb1b3e",
+                    "label": "Text Color",
+                    "name": "text_color",
+                    "type": "color_picker",
+                    "instructions": "Defult color is: # (In case you want to go back)",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#272726"
+                },
+                {
+                    "key": "field_6038c9bab1b41",
+                    "label": "Light Bg Color",
+                    "name": "light_bg_color",
+                    "type": "color_picker",
+                    "instructions": "Defult color is: # (In case you want to go back)",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#eeeeee"
+                },
+                {
+                    "key": "field_6038c9b3b1b3f",
+                    "label": "Dark Bg Color",
+                    "name": "dark_bg_color",
+                    "type": "color_picker",
+                    "instructions": "Defult color is: # (In case you want to go back)",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#020202"
+                },
+                {
+                    "key": "field_6038c9fdb1b42",
+                    "label": "Gray Color",
+                    "name": "gray_color",
+                    "type": "color_picker",
+                    "instructions": "Defult color is: #757575 (In case you want to go back)",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#757575"
+                },
+                {
+                    "key": "field_6038c9b5b1b40",
+                    "label": "Border Color",
+                    "name": "border_color",
+                    "type": "color_picker",
+                    "instructions": "Defult color is: # (In case you want to go back)",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#e4e9ed"
+                }
+            ]
+        },
+        {
+            "key": "field_60b60179141a3",
+            "label": "Typography",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_60b601902e87e",
+            "label": "Headings Font",
+            "name": "headings_font",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "https:\/\/fonts.googleapis.com\/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap",
+            "placeholder": ""
+        },
+        {
+            "key": "field_60b81ddac18b3",
+            "label": "Sub Headings Font",
+            "name": "sub_headings_font",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "https:\/\/fonts.googleapis.com\/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap",
+            "placeholder": ""
+        },
+        {
+            "key": "field_60b81dee7698c",
+            "label": "Body Font",
+            "name": "body_font",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "https:\/\/fonts.googleapis.com\/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap",
+            "placeholder": ""
+        },
+        {
+            "key": "field_60b81e047698d",
+            "label": "Misc Font",
+            "name": "misc_font",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "https:\/\/fonts.googleapis.com\/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-colors-branding"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Customize the website colors for things like buttons, borders, texts and all others.",
+    "modified": 1622684169
+}

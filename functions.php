@@ -7,7 +7,7 @@
  * @see wp-includes/template.php for locate_template() source
  * Supports child theme overrides.
  * $includes - root main './inc/files'
- * Please note that missing files will produce a fatal error.
+ * @internal Please note that missing files will produce a fatal error.
  * @author CATO
  * @since 1.0.0
  *
@@ -34,18 +34,38 @@ define( 'FXM_THEME_URI', trailingslashit( esc_url( get_template_directory_uri() 
 // require_once FXM_THEME_DIR . 'inc/core/class-fxm-icons.php';
 
 $includes = [
+  // Setup helper functions
   'inc/common-functions.php',
-  'inc/theme-setup.php',
+  // Theme customizations, hooks and extending
   'inc/core.php',
+  // Theme-wide reusable methods
+  'inc/methods.php',
+  // Custom template tags for this theme
+  'inc/custom-tags.php',
+  // Functions and definitions
+  'inc/theme-setup.php',
+  // Markup Functions
+  // @todo functions used by inc/template-parts.php
+  // Markup Files
   'inc/template-parts.php',
-  'inc/plugin-compatibility.php'
+  // Compatibility
+  'inc/compatibility.php',
+];
+
+
+// $includes = [
+//   'inc/common-functions.php',
+//   'inc/theme-setup.php',
+//   'inc/core.php',
+//   'inc/template-parts.php',
+//   'inc/plugin-compatibility.php'
   // 'inc/compatibility-plugins.php',
   // 'inc/methods.php',
   // 'inc/classes.php',
   // 'inc/taxonomies.php',
   // 'inc/acf-customizations.php',
   // 'inc/woocommerce.php'
-];
+// ];
 
 foreach ($includes as $file) {
   if (!$filepath = locate_template($file)) {

@@ -81,9 +81,7 @@ if (!function_exists('fxm_header_bottom_content')) {
 if (!function_exists('fxm_main_site_header')) {
 	function fxm_main_site_header()
 	{
-		// $settings = [];
 		$show_toolbar = (get_field('show_top_toolbar', 'option')) ? true : false;
-		// $settings[] = $show_toolbar;
 		$settings = [
 			'toolbar' => $show_toolbar
 		];
