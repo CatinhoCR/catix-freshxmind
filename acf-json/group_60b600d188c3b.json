@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_5f8d21eb7b0a0",
-            "label": "Footer Settings",
+            "label": "Top Footer Section",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -17,6 +17,21 @@
             },
             "placement": "left",
             "endpoint": 0
+        },
+        {
+            "key": "field_60bdd20e8006e",
+            "label": "Top Footer Background Color",
+            "name": "top_footer_background_color",
+            "type": "color_picker",
+            "instructions": "This is the color that will be set to the background of the top section of the footer.\r\nDefault is #070a17",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#070a17"
         },
         {
             "key": "field_605025fabebf8",
@@ -57,7 +72,7 @@
                 "id": ""
             },
             "message": "",
-            "default_value": 1,
+            "default_value": 0,
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
@@ -75,13 +90,44 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": 4,
+            "default_value": 3,
             "placeholder": "",
             "prepend": "",
             "append": "",
             "min": 3,
             "max": 4,
             "step": ""
+        },
+        {
+            "key": "field_60bdcd3d7b4f8",
+            "label": "Bottom Footer Section",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_60bdd25b8006f",
+            "label": "Bottom Footer Background Color",
+            "name": "bottom_footer_background_color",
+            "type": "color_picker",
+            "instructions": "This is the color that will be set to the background of the top section of the footer.\r\nDefault is #020202",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#0D132B"
         },
         {
             "key": "field_605b3329ffff2",
@@ -104,7 +150,7 @@
         },
         {
             "key": "field_5fc8a4d5c7daa",
-            "label": "Privacy Policy",
+            "label": "Privacy Policy Label",
             "name": "privacy_policy",
             "type": "text",
             "instructions": "",
@@ -144,7 +190,7 @@
         },
         {
             "key": "field_5fc8a53fc7dac",
-            "label": "Terms and Conditions",
+            "label": "Terms and Conditions Label",
             "name": "terms_and_conditions",
             "type": "text",
             "instructions": "",
@@ -200,5 +246,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1622681507
+    "modified": 1623054105
 }

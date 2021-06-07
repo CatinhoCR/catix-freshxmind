@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Hook into wp_head for awesomeness
  * This is a TODO: and will become relevant for production hooks into the wp_head tags
@@ -9,24 +10,12 @@
  * @link https://crunchify.com/how-to-clean-up-wordpress-header-section-without-any-plugin/
  */
 
-
 /**
- * Add Google Analytics Support and Snippet to Head
- */
-function fxm_add_gtag_to_head() {
-
-}
-
-/**
- * Add a custom CSS with the user selected colors for the theme features
- */
-
-
- /**
  * Wordpress meta tags version generators
  */
-function crunchify_remove_version() {
-	return '';
+function crunchify_remove_version()
+{
+  return '';
 }
 // add_filter('the_generator', 'crunchify_remove_version');
 
@@ -59,7 +48,7 @@ function crunchify_remove_version() {
 /**
  * Disable the emoji's
  *
-*/
+ */
 function disable_emojis()
 {
   remove_action('wp_head', 'print_emoji_detection_script', 7);

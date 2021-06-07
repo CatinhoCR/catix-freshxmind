@@ -2,10 +2,11 @@
 
 /**
  * Functions which enhance the theme by hooking into WordPress
- * @package freshxmind
+ * @see https://developer.wordpress.org/reference/functions/get_template_part/
+ *
+ * @package FreshXMind
  * @author Cato
  * @since 1.0.0
- *
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -24,7 +25,7 @@ if (!function_exists('fxm_wrapper_start')) {
   {
     get_template_part('partials/wrappers/wrapper', 'start');
   }
-  add_action('fxm_before_main_content', 'fxm_wrapper_start', 10);
+  add_action('fxm_content_before', 'fxm_wrapper_start', 10);
 }
 
 /**
@@ -39,7 +40,7 @@ if (!function_exists('fxm_wrapper_end')) {
   {
     get_template_part('partials/wrappers/wrapper', 'end');
   }
-  add_action('fxm_after_main_content', 'fxm_wrapper_end', 10);
+  add_action('fxm_content_after', 'fxm_wrapper_end', 10);
 }
 
 /**

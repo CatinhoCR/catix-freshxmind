@@ -13,9 +13,13 @@
  */
 
 get_header();
+// fxm_content_top();
+// fxm_content_bottom();
+// fxm_content_while_before();
+// fxm_content_while_after();
 ?>
 
-	<main id="primary" class="site-main">
+	<!-- <main id="primary" class="site-main"> -->
 
 		<?php
 		while ( have_posts() ) :
@@ -32,8 +36,9 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
-	</main><!-- #main -->
+	<!-- </main> -->
+
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();

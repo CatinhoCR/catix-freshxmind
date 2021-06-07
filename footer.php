@@ -15,16 +15,16 @@
  * @hooked themename_wrapper_end - 10 (outputs closing divs for the content)
  */
 fxm_content_after();
-
-do_action('fxm_footer_content');
+fxm_footer_before();
+fxm_main_site_footer();
 ?>
-<?php // get_template_part('resources/blocks/subscribe', 'subfooter'); ?>
-<?php // get_template_part('resources/blocks/footer'); ?>
+
 
 <!-- Extra stuff like site-wide notice banners or back to top button here below -->
+<?php fxm_footer_after(); ?>
 <?php get_template_part('resources/blocks/back-to-top'); ?>
 
 <?php wp_footer(); ?>
-
+<?php fxm_body_bottom(); ?>
 </body>
 </html>

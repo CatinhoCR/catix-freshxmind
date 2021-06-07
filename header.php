@@ -11,39 +11,37 @@
  */
 
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
+if (!defined('ABSPATH')) {
+  exit; // Exit if accessed directly.
 }
 
 ?>
-<!doctype html>
+<!DOCTYPE html>
+<?php fxm_html_before(); ?>
 <html <?php language_attributes(); ?>>
 
 <head>
+  <?php fxm_head_top(); ?>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="profile" href="https://gmpg.org/xfn/11">
-
   <?php wp_head(); ?>
-
-  <?php // @todo gtag support, css classes, header actions ?>
+  <?php fxm_head_bottom(); ?>
+  <?php // @todo gtag support, css classes, header actions
+  ?>
 </head>
 
 <body class="page <?= implode(' ', get_body_class()) ?>">
+  <?php fxm_body_top(); ?>
   <?php wp_body_open(); ?>
-  <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'fxm'); ?></a>
-
-  <?php fxm_header_before(); ?>
-
-  <?php fxm_main_site_header(); ?>
-
-  <?php fxm_header_after(); ?>
+  <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'fxm'); ?></a>
 
   <?php
-  /**
-   * fxm_before_main_content hook
-   *
-   * @hooked themename_wrapper_start - 10 (outputs opening divs for the content)
-   */
+  fxm_header_before();
+
+  fxm_main_site_header();
+
+  fxm_header_after();
+
   fxm_content_before();
   ?>

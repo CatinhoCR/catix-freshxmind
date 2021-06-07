@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @todo cleanup
+ * @see wp-content/themes/astra/inc/class-astra-dynamic-css.php
+ */
+
 // $fxm_default_colors
 // @todo see (S)CSS bookmarks in chrome to make mixins on these and etc
 // @todo set defaults for real somewhere
@@ -28,6 +33,7 @@
 // ]
 
 /**
+ * @todo update comment
  * Gets the selected colors in the ACF options page
  *
  * @return void
@@ -37,14 +43,23 @@
 if (!function_exists('fxm_get_theme_colors')) {
   function fxm_get_theme_colors()
   {
+    // Branding Colors
     $colors = get_field('theme_branding_colors', 'option');
-    $brand_colors = [
+    // Footer Colors
+    $footer_top_bg = get_field('top_footer_background_color', 'option');
+    $footer_bottom_bg = get_field('bottom_footer_background_color', 'option');
+
+    // All
+    $theme_colors = [
       'main' => $colors['main_color'],
       'second' => $colors['secondary_color'],
       'third' => $colors['third_color'],
-      'fourth' => $colors['fourth_color']
+      'fourth' => $colors['fourth_color'],
+      // @todo general section
+      'foot_top_bg' => $footer_top_bg,
+      'foot_bottom_bg' => $footer_bottom_bg,
     ];
-    return $brand_colors;
+    return $theme_colors;
   }
 }
 
@@ -59,26 +74,4 @@ if (!function_exists('fxm_print_css_variables')) {
     }
     echo '--fm-' . esc_attr($key) . '-color: ' . esc_attr($color) . ';';
   }
-}
-
-/**
- *
- */
-if (!function_exists('fxm_theme_color_vars')) {
-  function fxm_theme_color_vars()
-  {
-    $colors_site = fxm_get_theme_colors();
-?>
-    <style type="text/css" media="screen">
-      :root {
-        <?php
-        foreach ($colors_site as $key => $color) {
-          fxm_print_css_variables($key, $color);
-        }
-        ?>
-      }
-    </style>
-  <?php
-  }
-  add_action('fxm_print_theme_colors', 'fxm_theme_color_vars');
 }

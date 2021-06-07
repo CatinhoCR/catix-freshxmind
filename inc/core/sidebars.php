@@ -8,6 +8,7 @@
  * @since 1.0.0
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ * @todo @see wp-content/themes/astra/inc/widgets.php
  */
 if (!function_exists('fxm_widgets_init')) {
 	function fxm_widgets_init()

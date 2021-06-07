@@ -20,6 +20,7 @@
  * @copyright   Copyright (c) 2021, CATIX
  * @link        https://cato506.com/
  * @since       FreshXMind 1.0.0
+ * @see @todo wp-content/themes/astra/inc/class-astra-after-setup-theme.php
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -132,15 +133,17 @@ if ( ! class_exists( 'Fxm_After_Setup_Theme' ) ) {
 			);
 
 			// Add theme support for Custom Logo.
-			// add_theme_support(
-			// 	'custom-logo',
-			// 	array(
-			// 		'width'       => 180,
-			// 		'height'      => 60,
-			// 		'flex-width'  => true,
-			// 		'flex-height' => true,
-			// 	)
-			// );
+			add_theme_support(
+				'custom-logo',
+				array(
+					'width'       => 400,
+					'height'      => 180,
+					'flex-width'  => true,
+					'flex-height' => true,
+					'header-text' => array('site-name'),
+					'unlink-homepage-logo' => true,
+				)
+			);
 
 			// Customize Selective Refresh Widgets.
 			add_theme_support( 'customize-selective-refresh-widgets' );
@@ -169,7 +172,7 @@ if ( ! class_exists( 'Fxm_After_Setup_Theme' ) ) {
 		 * @return void
 		 */
 		public function setup_content_width() {
-
+			// @todo
     }
   }
 }

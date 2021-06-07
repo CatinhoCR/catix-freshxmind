@@ -1,11 +1,15 @@
 <?php
 
 /**
+ * These files register the actions hooked in core/theme-hooks.php
+ * do_actions and functions to get template parts
+ * fetched/processed data should be sent in to the template via $args parameter
  *
- * @package fxm
+ * @package FreshXMind
  * @author Cato
  * @since 1.0.0
  *
+ * @see https://developer.wordpress.org/reference/functions/get_template_part/
  */
 
 if (!defined('ABSPATH')) {
@@ -13,9 +17,10 @@ if (!defined('ABSPATH')) {
 }
 
 $template_parts_includes = [
-  'inc/template-parts/wrappers.php',
+  'inc/template-parts/content.php',
   'inc/template-parts/header.php',
-  // 'inc/template-parts/.php'
+  'inc/template-parts/footer.php',
+  // 'inc/template-parts/.php',
 ];
 
 foreach ($template_parts_includes as $file) {

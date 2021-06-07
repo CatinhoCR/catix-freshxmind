@@ -1,0 +1,6 @@
+.site-footer {
+  &__inner {
+    @include container(xl);
+    @include flex-children(center, space-between);
+  }
+}
