@@ -2,10 +2,11 @@
 
 /**
  * Functions which enhance the theme by hooking into WordPress
- * @package freshxmind
+ * @see https://developer.wordpress.org/reference/functions/get_template_part/
+ *
+ * @package FreshXMind
  * @author Cato
  * @since 1.0.0
- *
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
