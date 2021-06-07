@@ -38,6 +38,8 @@ $includes = [
   'inc/common-functions.php',
   // Theme customizations, hooks and extending
   'inc/core.php',
+  // Customizer Theme API
+  'inc/customizer.php',
   // Theme-wide reusable methods
   'inc/methods.php',
   // Custom template tags for this theme
