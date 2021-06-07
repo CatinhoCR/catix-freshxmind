@@ -15,7 +15,8 @@ if (!defined('ABSPATH')) {
 $template_parts_includes = [
   'inc/template-parts/wrappers.php',
   'inc/template-parts/header.php',
-  // 'inc/template-parts/.php'
+  'inc/template-parts/footer.php',
+  // 'inc/template-parts/.php',
 ];
 
 foreach ($template_parts_includes as $file) {

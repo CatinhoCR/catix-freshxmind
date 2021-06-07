@@ -23,11 +23,11 @@
     flex-basis: rem(100);
 
     .full {
-      display: none;
+      display: block;
     }
 
     .mini {
-      display: block;
+      display: none;
     }
   }
 
@@ -61,6 +61,19 @@
       height: $nav-height-desktop;
       max-height: $nav-height-desktop;
       transition: all 0.4s ease;
+    }
+
+    &__brand {
+      max-width: rem(160);
+      flex-basis: rem(160);
+
+      .full {
+        display: block;
+      }
+
+      .mini {
+        display: none;
+      }
     }
 
     &__toolbar {

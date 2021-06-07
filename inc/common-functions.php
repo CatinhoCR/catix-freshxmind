@@ -5,7 +5,7 @@
  * @package freshxmind
  * @author Cato
  * @since 1.0.0
- *
+ * @see wp-content/themes/astra/inc/core/common-functions.php
  */
 
 if (!defined('ABSPATH')) {

@@ -76,6 +76,7 @@ $default-grid-gutter: 20px;
 
 // Flexbox Grid Normal Row for now
 @mixin row($align: flex-start, $justify: flex-start) {
+  width: 100%;
   display: flex;
   align-items: $align;
   justify-content: $justify;

@@ -1,7 +1,10 @@
 <?php
 
 /**
- * Get custom logo
+ * Get custom logo from ACF fields
+ * @deprecated
+ * @todo Decide approach this or custom logo from customizer..
+ * if customizer, then how to add other logo versions needs to be decided
  * @param Array $args
  * @param String $args->style (prop) (can be normal || mini)
  * @param String $args->color (prop) (can be light || dark)

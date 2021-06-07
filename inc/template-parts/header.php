@@ -115,6 +115,23 @@ if (!function_exists('fxm_header_bottom_content')) {
 	}
 	add_action('fxm_header_bottom', 'fxm_header_bottom_content', 10);
 }
+
+/**
+ * Custom Logo
+ *
+ * @return void
+ * @since  1.0
+ * @author CATO
+ **/
+if (!function_exists('fxm_custom_logo')) {
+	function fxm_custom_logo()
+	{
+		get_template_part('partials/header/custom', 'logo');
+		// get_template_part('partials/header/main', 'nav');
+	}
+	// add_action('fxm_header_bottom', 'fxm_header_bottom_content', 10);
+}
+
 /**
  * Main Site Header Wrapper Function
  *

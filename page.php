@@ -13,6 +13,10 @@
  */
 
 get_header();
+// fxm_content_top();
+// fxm_content_bottom();
+// fxm_content_while_before();
+// fxm_content_while_after();
 ?>
 
 	<main id="primary" class="site-main">

@@ -20,7 +20,8 @@ $logo_args = [
 <div class="header__navbar">
   <div class="header__inner">
     <div class="header__brand">
-      <?php get_template_part('partials/components/brand', 'logo', $logo_args); ?>
+      <?php // get_template_part('partials/components/brand', 'logo', $logo_args); ?>
+      <?php fxm_custom_logo(); ?>
     </div>
     <div class="header__menu">
       <?php

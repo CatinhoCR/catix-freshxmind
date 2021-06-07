@@ -23,11 +23,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 if (!function_exists('fxm_main_site_footer')) {
 	function fxm_main_site_footer()
 	{
+		$settings = [];
+		// $show_social = get_field('show_social_networks_area', 'option');
+		// $cols = get_field('footer_columns', 'option');
+		// $cols_class = ($cols === '4') ? '3' : '4';
 		// $show_toolbar = (get_field('show_top_toolbar', 'option')) ? true : false;
 		// $settings = [
-		// 	'toolbar' => $show_toolbar
+		// 	'cols' => $cols,
+		// 	'cols_class' => $cols_class,
+		// 	'show_social' => $show_social,
+		// 	// 'toolbar' => $show_toolbar
 		// ];
-		// get_template_part('partials/footer/site', 'footer', $settings);
+		get_template_part('partials/footer/site', 'footer', $settings);
 	}
 }
 

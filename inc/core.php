@@ -27,7 +27,8 @@ $core_includes = [
   // Custom Post Types, Taxonomies, Widgets, etc
   // 'inc/core/post_types.php',
   // 'inc/core/taxonomies.php',
-  // 'inc/core/sidebars.php',
+  'inc/core/sidebar-manager.php',
+  'inc/core/sidebars.php',
 ];
 
 foreach ($core_includes as $file) {
