@@ -63,69 +63,54 @@ if (!class_exists('Fxm_Customizer')) {
      */
     public function customize_register_panel($wp_customize)
     {
-      // Add a footer/copyright information section.
+      // Add Colors Section
       $wp_customize->add_section(
         'colors',
         array(
           'title' => __('Colors', 'fxm'),
-          'priority' => 20, //
+          'priority' => 20,
         )
       );
-      // Add Settings
+      // Add Color Settings
       $wp_customize->add_setting(
         'fxm_primary_color',
         array(
-          'default' => '#f72525',
+          'default' => '#9e3226',
           'sanitize_callback' => 'sanitize_hex_color',
         )
       );
-      // $wp_customize->add_control(
-      //   'fxm_primary_color',
-      //   array(
-      //     'type' => 'date',
-      //     'priority' => 10, // Within the section.
-      //     'section' => 'colors', // Required, core or custom.
-      //     'label' => __('Date'),
-      //     'description' => __('This is a date control with a red border.'),
-      //     'input_attrs' => array(
-      //       'class' => 'my-custom-class-for-js',
-      //       'style' => 'border: 1px solid #900',
-      //       'placeholder' => __('mm/dd/yyyy'),
-      //     ),
-      //     'active_callback' => 'is_front_page',
-      //   )
-      // );
+      $wp_customize->add_setting(
+        'fxm_secondary_color',
+        array(
+          'default' => '#070a17',
+          'sanitize_callback' => 'sanitize_hex_color',
+        )
+      );
+      // Custom Controls
       $wp_customize->add_control(
         new WP_Customize_Color_Control(
           $wp_customize,
           'fxm_primary_color',
           array(
-            'label' => __('Accent Color', 'fxm'),
+            'label' => __('Main Layout Color', 'fxm'),
+            'description' => __('Main color used for buttons and other layout options', 'fxm'),
             'section' => 'colors',
+            'settings' => 'fxm_primary_color',
           )
         )
       );
-
-
-
-      // Theme Options Panel
-      // $wp_customize->add_panel(
-      //   'fxm_theme_options',
-      //   array(
-      //     'priority'       => 160,
-      //     'title'            => __('Theme Options', 'fxm'),
-      //     'description'      => __('Theme Modifications like color scheme, theme texts and layout preferences can be done here', 'fxm'),
-      //   )
-      // );
-
-      // Add a footer/copyright information section.
-      // $wp_customize->add_section(
-      //   'footer',
-      //   array(
-      //     'title' => __('Footer', 'fxm'),
-      //     'priority' => 105, // Before Widgets.
-      //   )
-      // );
+      $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+          $wp_customize,
+          'fxm_secondary_color',
+          array(
+            'label' => __('Secondary Layout Color', 'fxm'),
+            'description' => __('Secondary color used for buttons and other layout options', 'fxm'),
+            'section' => 'colors',
+            'settings' => 'fxm_secondary_color',
+          )
+        )
+      );
 
     }
 
