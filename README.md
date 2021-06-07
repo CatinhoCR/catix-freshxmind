@@ -1,20 +1,21 @@
 # Fresh X Mind Wordpress Starter Theme
 
-FreshXMind is a Wordpress boilerplate or starter theme, to help you quickly kickstart custom theming. It's compliant to all the latest Wordpress standards and guidelines. Uses **Webpack** for hot reloading during development, and production build assets too, using **SCSS** and **modern JS** (EcmaScript) with Babel.
+FreshXMind is a Wordpress theme boilerplate or starter project, to help you quickly kickstart custom themes. Actively maintained and in constant development to ensure compliance with all the latest Wordpress standards and guidelines.
 
-## To Do
+## Features
 
-Merge ant changes here with the previous starter version at catix-fxm. Keep just one starter version and base off from that for actual AyP work.
-
-README file needs to include a list of features built in the theme and docs on them, things like:
-
-- Color settings
-- Logos
-- Theme Hooks and template parts
-- Styles
-- ACF Pro Custom field groups built-in and how to use/update them
-
-**Built in common functions** to extend theme core features and **hooks** to make development easier, by simply plugging your template parts to the corresponding functions and actions, or editing the already existing ones to fit your needs. This makes it extendable and compatible with child themes too.
+- **Gutenberg** ready theme
+- **Customizer API** extends, ready with commonly used **theme options** configurations
+  - Custom Color settings
+  - Logos
+- Hot reloading during development using **Webpack**
+- Built in workflow for **SCSS** and **Modern JavaScript ES6+**
+- Built in commonly used PHP **helper functions**
+- Awesome `functions.php` workflow with Classes and a clear folder structure
+- **Theme Hooks** and **custom actions** makes this super easy to customize **template-parts** while keeping template files super clean. Simply __plug in__ your template-parts to the corresponding functions and actions, see the `header.php` and `footer.php` for examples.
+- This (^) makes it extendable and compatible with child themes too
+- Code linting
+- So many other features, docs under construction
 
 ## Dependencies
 
@@ -42,26 +43,29 @@ If you'd like to use `npm` instead of `Yarn`, simply delete the `yarn.lock` in t
 
 - `npm run build` (To do here add CI, deployment, etc).
 
-## Theme Structure
-
-Very briefly, the **template files** used to render content **execute functions** (you'll notice them all around, for instance in `header.php`).
-
-These functions are simple `do_action()` **hooks** (located at `/inc/core/theme-hooks.php`).
-
-These Hooks are calling functions defined as **Template Parts** methods (Look at `inc/template-parts/` for the corresponding methods)
-
-This is done for 2 main reasons:
-
-- If the theme was to grow into a standalone solution it would make it super easy to re-write template parts by hooking into the right action from a child theme
-- It keeps the templates code so much cleaner and easier to read, maintain and update where it needs to be.
-
-**This is the way.**
-
-Note: For super simple projects, you could skip this step and simply do `get_template_part()` functions directly from your templates, or just throw all that messy code in that single file _(yikes)_.
+## Folder/Theme Structure
 
 Here's a quick overview and walkthrough of how the theme's organized and the folder structure. **Look at `functions.php` and the `/inc/` folder**
 
-## Styles
+### Main Workflow
+
+Theme's templates (i.e [header.php](header.php)) execute **action hooks** _(`do_action()`)_. These are located here: [Theme Hooks](inc/core/theme-hooks.php).
+
+The **hooked actions** and their corresponding **functions** are **registered** as [template-parts](inc/template-parts.php). _Might rename this for clearer convention_
+
+These functions fetch data if needed, and **render partials** _or template-parts_ using `get_template_part()`. See the [Header Action Functions](inc/template-parts/header.php) for a working example.
+
+Why do it like this instead of just calling the `get_template_part()` directly from the template files?
+
+- Super easy to override/extend the theme by hooking into the right action from a child theme/plugin
+- Keeps templates super clean and easy to read, maintain and update to fit custom needs
+- Makes this a starter theme, potentially easy to extend into a stand-alone, white-label, generic solution
+
+**This is the way.**
+
+<!-- Note: For super simple projects, you could simply do `get_template_part()` functions directly from your templates, or just throw all that messy code in that single file _(yikes)_. -->
+
+### Styles
 
 - `Abstracts`: Variables, functions, mixins, helpers. A good way to see this is, it should not print out any CSS code if compiled on it's own.
 - `Base`: Settings, tools and helpers. Contains global styles, normalizers and utility classes.
@@ -70,6 +74,10 @@ Here's a quick overview and walkthrough of how the theme's organized and the fol
 - `Layout`: For things specific to the website's layout and formatting, global styles. Things specific to the theme either in FE or admin.
 - `Pages`: Styles specific to pages like the home page
 - `Helpers`: Overrides to colors classes and spacings, etc.
+
+## Theme Customization
+
+The `fxm` prefix can be changed by running a search and replace on the theme's folder and replacing it for your desired prefix/theme-domain.
 
 ## Debugging
 

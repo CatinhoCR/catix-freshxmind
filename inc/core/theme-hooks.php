@@ -2,8 +2,7 @@
 
 /**
  * Theme Hook Alliance hook stub list.
- * All the actions here are registered in the 'inc/template-parts' folder
- * Each block of actions' comment will only reference the file where it's at within that folder
+ * @see 'inc/template-parts' folders for the add_action functions
  *
  * @see 'inc/template-parts/[...]' for the functions registering the actions
  * @see  https://github.com/zamoose/themehookalliance
@@ -145,6 +144,7 @@ function fxm_head_bottom()
  * Semantic <header> hooks
  *
  * $fxm_supports[] = 'header';
+ * @see inc/template-parts/header.php
  */
 function fxm_header_before()
 {
@@ -170,15 +170,16 @@ function fxm_header_bottom()
  * Semantic <content> hooks
  *
  * $fxm_supports[] = 'content';
+ * @see inc/template-parts/content-actions.php
  */
 function fxm_content_before()
 {
-  do_action('fxm_before_main_content');
+  do_action('fxm_content_before');
 }
 
 function fxm_content_after()
 {
-  do_action('fxm_after_main_content');
+  do_action('fxm_content_after');
 }
 
 function fxm_content_top()
