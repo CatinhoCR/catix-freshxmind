@@ -121,6 +121,30 @@ if (!class_exists('Fxm_Customizer')) {
           'panel' => 'fxm_theme_options_panel',
         )
       );
+
+      // Add Blog Settings Section
+      $wp_customize->add_section(
+        'fxm_blog_settings',
+        array(
+          'title'       => __('Blog Settings', 'fxm'), //Visible title of section
+          'priority'    => 20, //Determines what order this appears in
+          'capability'  => 'edit_theme_options', //Capability needed to tweak
+          'description' => __('Here you can edit settings related to the Blog Page and Posts.', 'fxm'), //Descriptive tooltip
+          'panel' => 'fxm_theme_options_panel',
+        )
+      );
+
+      // Add WC - Shop Settings Section
+      $wp_customize->add_section(
+        'fxm_shop_settings',
+        array(
+          'title'       => __('Shop Settings', 'fxm'), //Visible title of section
+          'priority'    => 20, //Determines what order this appears in
+          'capability'  => 'edit_theme_options', //Capability needed to tweak
+          'description' => __('Here you can edit settings related to the Shop Pages and Products.', 'fxm'), //Descriptive tooltip
+          'panel' => 'fxm_theme_options_panel',
+        )
+      );
     }
 
     /**
@@ -165,7 +189,7 @@ if (!class_exists('Fxm_Customizer')) {
       $wp_customize->add_setting(
         'fxm_sidebar_default',
         array(
-          'default' => 'right-sidebar',
+          'default' => 'default-sidebar',
           'sanitize_callback' => '',
           // 'transport' => 'postMessage' | 'refresh',
         )
@@ -184,10 +208,10 @@ if (!class_exists('Fxm_Customizer')) {
           array(
             'type' => 'select',
             'choices' => array(
-              'default-sidebar' => 'Default',
-              'right-sidebar' => 'Right',
-              'left-sidebar' => 'Left',
-              'no-sidebar' => 'None',
+              'default' => 'Default',
+              'right' => 'Right',
+              'left' => 'Left',
+              'none' => 'None',
             ),
             'label'      => __('Default Sidebar', 'fxm'),
             'description' => __('Select your website default sidebar layout. You can override this for some pages below.', 'fxm'),

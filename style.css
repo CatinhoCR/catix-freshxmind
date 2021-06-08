@@ -1,16 +1,16 @@
 /*
-Theme Name: FreshXMind
+Theme Name: Fresh X Mind
 Theme URI: https://github.com/CatinhoCR/freshxmind-starter-theme
-Author: CATO
-Author URI: https://www.cato506.com/web-development/
-Description: Fresh X Mind is a custom made Wordpress Theme complete solution built by Catix Web Solutions with a custom tailored build workflow. The core initial theme files were based off from Underscores.
+Author: Catix Web Solutions
+Author URI: https://www.cato506.com/
+Description: Fresh X Mind is a Wordpress starter theme. Modern and yet simple development workflow, made to quickly kickstart well organized & easy to maintain Wordpress themes. Webpack based setup supports Sass (scss) stylesheets, ECMAScript 2015+ compiling, Live reloading during development, image optimization, automatic built-in error logs, code linting and a lot more.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 5.3
 Tested up to: 5.7.1
-Requires PHP: 5.3
+Requires PHP: 5.4
 Text Domain: fxm
-Tags: custom theme, fresh mind, craftist, last version, custom-menu, custom-logo, entertainment, one-column, two-columns, left-sidebar, e-commerce, right-sidebar, custom-colors, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, theme-options, threaded-comments, translation-ready, blog
+Tags: custom theme, fresh mind, custom-menu, custom-logo, entertainment, one-column, two-columns, left-sidebar, e-commerce, right-sidebar, custom-colors, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, theme-options, threaded-comments, translation-ready, blog
 AMP: true
 */

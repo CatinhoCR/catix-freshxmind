@@ -43,7 +43,7 @@ $includes = [
   'inc/theme-setup.php',
   // Markup Files
   'inc/template-parts.php',
-  // Common Used Plugins Compatibility
+  // Plugins Compatibility & Functions
   'inc/compatibility.php',
 ];
 

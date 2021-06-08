@@ -12,9 +12,12 @@ if (!defined('ABSPATH')) {
   exit; // Exit if accessed directly.
 }
 
+$path = 'inc/common/';
+
 $methods_includes = [
-  'inc/common/helper-functions.php',
-  'inc/common/markup-functions.php'
+  $path . 'conditional-tags.php',
+  $path . 'helper-functions.php',
+  $path . 'markup-functions.php'
 ];
 
 foreach ($methods_includes as $file) {
