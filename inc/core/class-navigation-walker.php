@@ -1,7 +1,12 @@
 <?php
 
 /**
- * A
+ * A custom Navigation Walker Function to customize the output of the Wordpress built in Menus using wp_nav_menu($args) function
+ * Used in partials/header/header-navbar.php
+ * Customize or delete as needed
+ *
+ * @see https://developer.wordpress.org/reference/functions/wp_nav_menu/
+ * @see https://developer.wordpress.org/reference/classes/walker/
  * @package freshxmind
  * @author Cato
  * @since 1.0.0
@@ -30,7 +35,7 @@ class FreshXMind_Custom_Megamenu extends Walker_Nav_Menu
     $description = $item->description;
     $permalink = $item->url;
     $classes         = empty($item->classes) ? array() : (array) $item->classes;
-    $classes[] = 'nav__list-item';
+    $classes[] = 'header__item-nav';
     $item->classes = $classes;
     //
 
@@ -38,7 +43,7 @@ class FreshXMind_Custom_Megamenu extends Walker_Nav_Menu
 
     //Add SPAN if no Permalink
     if ($permalink && $permalink != '#') {
-      $output .= '<a class="nav__list-link" href="' . $permalink . '">';
+      $output .= '<a class="header__link-nav" href="' . $permalink . '">';
     } else {
       $output .= '<span>';
     }

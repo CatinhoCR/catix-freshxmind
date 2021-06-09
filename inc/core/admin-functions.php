@@ -19,7 +19,6 @@ if (!defined('ABSPATH')) {
  */
 
 if (!function_exists('fxm_register_nav_menu')) {
-
   function fxm_register_nav_menu()
   {
     register_nav_menus(array(
@@ -29,7 +28,7 @@ if (!function_exists('fxm_register_nav_menu')) {
       'footer-menu' => __('Footer Menu', 'fxm')
     ));
   }
-  add_action('after_setup_theme', 'fxm_register_nav_menu', 0);
+  add_action('after_setup_theme', 'fxm_register_nav_menu', 10);
 }
 
 

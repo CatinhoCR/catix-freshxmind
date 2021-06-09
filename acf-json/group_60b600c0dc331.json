@@ -1,0 +1,208 @@
+{
+    "key": "group_60b600c0dc331",
+    "title": "Layout Settings - Header",
+    "fields": [
+        {
+            "key": "field_5f8d299a4d398",
+            "label": "Header Settings",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f9f44bc1045c",
+            "label": "Use Dark or Light Version",
+            "name": "dark_light_version",
+            "type": "select",
+            "instructions": "Light version sets the Nav's background to a white color, and uses the dark logo versions.\r\nThe dark one sets the background to black, and uses light version logos.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "light": "Light",
+                "dark": "Dark"
+            },
+            "default_value": "light",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_60a829ec52a0b",
+            "label": "Show Top Toolbar",
+            "name": "show_top_toolbar",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_60b849b23b0df",
+            "label": "Main Navigation Bar",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f9f435810459",
+            "label": "Main Navigation Style",
+            "name": "main_navigation_style",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "sticky_mini": "Fixed + Mini (Stays on top of screen, smaller size on scroll)",
+                "sticky": "Fixed Normal (Stays on top of screen, same size on scroll)",
+                "static": "Static (Hides on scroll)"
+            },
+            "default_value": "sticky_mini",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5f9f448a1045b",
+            "label": "Show Hamburger Navigation on Desktop",
+            "name": "show_hamburger_nav_desktop",
+            "type": "true_false",
+            "instructions": "If selected, the Hamburger navigation icon will display on all devices, including big screens, to the left of the logo and be usable for a different menu if user so wants.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Will show hamburger on desktop!",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_60362010b20ad",
+            "label": "Show User Dropdown",
+            "name": "show_user_dropdown",
+            "type": "true_false",
+            "instructions": "If set to TRUE (checked) Shows a Dropdown Menu Item in the main Navigation.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_60361feeb20ac",
+            "label": "Show WooCommerce Items",
+            "name": "show_woocommerce_items",
+            "type": "true_false",
+            "instructions": "Shows a Cart icon on the Nav. Also NOTE that if the \"Show User Dropdown\" field above is NOT selected, this will show a \"My Account\" link on the Nav too.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5f9f44521045a",
+            "label": "Search Bar Style",
+            "name": "search_bar_style",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Default",
+                "modal": "Modal"
+            },
+            "default_value": "default",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-header"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1622690259
+}
