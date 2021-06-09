@@ -33,6 +33,8 @@ $includes = [
   'inc/common-functions.php',
   // Theme customizations, hooks and extending
   'inc/core.php',
+  // Customizer Theme API
+  'inc/customizer.php',
   // Markup & Other Custom Functions
   'inc/methods.php',
   // Custom template tags for this theme
@@ -41,7 +43,7 @@ $includes = [
   'inc/theme-setup.php',
   // Markup Files
   'inc/template-parts.php',
-  // Common Used Plugins Compatibility
+  // Plugins Compatibility & Functions
   'inc/compatibility.php',
 ];
 

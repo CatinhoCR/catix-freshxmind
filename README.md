@@ -1,41 +1,82 @@
 # Fresh X Mind Wordpress Starter Theme
 
-FreshXMind is a Wordpress theme boilerplate or starter project, to help you quickly kickstart custom themes. Actively maintained and in constant development to ensure compliance with all the latest Wordpress standards and guidelines.
+Fresh X Mind is a Wordpress starter theme. Modern and simple development workflow, made to quickly kickstart well organized & easy to maintain Wordpress themes. Webpack based setup supports Sass (scss) stylesheets, ECMAScript 2015+ compiling, Live reloading during development, image optimization, automatic error logs, code linting and a lot more. See the _complete_ [list of features](#features) below.
+Actively maintained and in constant development to ensure compliance with all the latest Wordpress updates, standards and guidelines.
+
+[Contributions] and [feedback] welcome!
+
+Table of Contents:
+
+- [Fresh X Mind Wordpress Starter Theme](#fresh-x-mind-wordpress-starter-theme)
+  - [Features](#features)
+  - [Dependencies](#dependencies)
+    - [Optional Dependencies](#optional-dependencies)
+  - [Installation](#installation)
+    - [Run Webpack dev server with live reload](#run-webpack-dev-server-with-live-reload)
+    - [Compile assets for production](#compile-assets-for-production)
+  - [Theme Customization](#theme-customization)
+  - [Folder/Theme Structure](#foldertheme-structure)
+    - [Main Workflow](#main-workflow)
+    - [Styles](#styles)
+  - [Debugging](#debugging)
+  - [Usage](#usage)
+  - [Roadmap](#roadmap)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Contact](#contact)
+  - [Acknowledgements](#acknowledgements)
 
 ## Features
 
-- **Gutenberg** ready theme
+- Webpack workflow and live reloading for development, see folder [`build-tasks/`](build-tasks/)
+- Wordpress [coding standards] compliant
+- Custom theme hooks and actions built-in
+- [Theme Options](#theme-options) customization using the [Customizer API]
+
+<!-- - **Gutenberg** ready theme
 - **Customizer API** extends, ready with commonly used **theme options** configurations
   - Custom Color settings
   - Logos
+  - Sidebar Configuration Settings
 - Hot reloading during development using **Webpack**
 - Built in workflow for **SCSS** and **Modern JavaScript ES6+**
 - Built in commonly used PHP **helper functions**
 - Awesome `functions.php` workflow with Classes and a clear folder structure
 - **Theme Hooks** and **custom actions** makes this super easy to customize **template-parts** while keeping template files super clean. Simply __plug in__ your template-parts to the corresponding functions and actions, see the `header.php` and `footer.php` for examples.
 - This (^) makes it extendable and compatible with child themes too
-- Code linting
-- So many other features, docs under construction
+- Code linting -->
 
 ## Dependencies
 
-- PHP 7+
-- Node 8+
-- NPM 5+
-- Yarn
-- ACF PRO Wordpress Plugin (Non ACF version incoming)
+- [PHP] >= 5.4
+- [Node.js] >= 8
+- [Yarn]
+- [Wordpress] >= 5.3
 
-Note: We're not including the ACF plugin, you'll need your own license to use it.
+### Optional Dependencies
+
+- [Advanced Custom Fields]
+- [WooCommerce]
+
+Note: To keep project setup steps simple, ACF is not included inside the theme. Make sure to install ACF _and/or WooCommerce_ if you plan on using them.
 
 ## Installation
 
-Clone repo into your `wp-content/themes` folder and run
+1. Generate your repository from Github's [template generator] _**OR** clone it_.
+2. Clone your new repo to the `wp-content/themes` folder of your Wordpress installation.
+3. Navigate to the theme's root folder in your terminal and run `yarn` to get the development dependencies.
+   - `yarn`
 
-- `yarn install`
-
-If you'd like to use `npm` instead of `Yarn`, simply delete the `yarn.lock` in the root folder and run `npm install` instead.
+You should now have all the necessary dependencies to run the [build process](#compile-assets-for-production).
 
 ### Run Webpack dev server with live reload
+
+Update `HOST` near the top of [`build-tasks/env.config.js`](build-tasks/env.config.js) to reflect your local development hostname.
+-Although it's not necessary, we recommend using Laravel's Valet for setting up your local environment easily.-
+
+- `HOST: 'https://project-name.test'`
+
+With that done, you should now be able to run the project:
 
 - `npm run start`
 
@@ -43,9 +84,15 @@ If you'd like to use `npm` instead of `Yarn`, simply delete the `yarn.lock` in t
 
 - `npm run build` (To do here add CI, deployment, etc).
 
+## Theme Customization
+
+<!-- @todo -->
+The `fxm` prefix can be changed by running a search and replace on the theme's folder and replacing it for your desired prefix/theme-domain.
+
 ## Folder/Theme Structure
 
 Here's a quick overview and walkthrough of how the theme's organized and the folder structure. **Look at `functions.php` and the `/inc/` folder**
+<!-- @todo Add folder structure detailed overview  -->
 
 ### Main Workflow
 
@@ -75,10 +122,6 @@ Why do it like this instead of just calling the `get_template_part()` directly f
 - `Pages`: Styles specific to pages like the home page
 - `Helpers`: Overrides to colors classes and spacings, etc.
 
-## Theme Customization
-
-The `fxm` prefix can be changed by running a search and replace on the theme's folder and replacing it for your desired prefix/theme-domain.
-
 ## Debugging
 
 Make sure to add the following at the bottom of your `wp-config.php` file:
@@ -103,18 +146,19 @@ _For more examples, please refer to the [Documentation](https://cato506.com/fres
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/CatinhoCR/catix-freshxmind/issues) for a list of proposed features (and known issues).
+See the open [issues] for a list of proposed features (and known issues).
+Any [feedback], ideas or feature requests are welcome too!
 
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+[Contributions] are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+5. Open a [Pull Request]
 
 <!-- LICENSE -->
 ## License
@@ -124,12 +168,27 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Andrés Castillo - [@cato_506](https://twitter.com/cato_506) - [email](mailto:hello@cato506.com?subject=[GitHub]%20FreshX%20Mind%20-)
+<!-- Andrés Castillo - [@cato_506](https://twitter.com/cato_506) - [email](mailto:hello@cato506.com?subject=[GitHub]%20FreshX%20Mind%20-) -->
 
-Project Link: [https://github.com/CatinhoCR/catix-freshxmind](https://github.com/CatinhoCR/catix-freshxmind)
+<!-- Project Link: [https://github.com/CatinhoCR/catix-freshxmind](https://github.com/CatinhoCR/catix-freshxmind) -->
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-- [CATO](https://cato506.com)
-- [Underscores](https://underscores.me/)
+The core initial theme files were based off from [Underscores](https://underscores.me/).
+
+<!-- Links -->
+[coding standards]: https://developer.wordpress.org/coding-standards
+[Contributions]: https://github.com/CatinhoCR/catix-freshxmind/pulls
+[feedback]: https://github.com/CatinhoCR/catix-freshxmind/discussions
+[Customizer API]: https://codex.wordpress.org/Theme_Customization_API
+[issues]: https://github.com/CatinhoCR/catix-freshxmind/issues
+[Pull Request]: https://github.com/CatinhoCR/catix-freshxmind/pulls
+[Fresh X Mind]: https://github.com/CatinhoCR/catix-freshxmind
+[template generator]: https://github.com/CatinhoCR/catix-freshxmind/generate
+[Node.js]: https://nodejs.org/
+[PHP]: https://www.php.net/manual/en/install.php
+[Wordpress]: https://wordpress.org
+[Yarn]: https://classic.yarnpkg.com/en/docs/install
+[Advanced Custom Fields]: https://www.advancedcustomfields.com
+[WooCommerce]: https://woocommerce.com/

@@ -13,9 +13,12 @@ if (!defined('ABSPATH')) {
   exit; // Exit if accessed directly.
 }
 
-/*
-* Custom logs to wp-content/debug.log
-* -----------------------------------------------*/
+/**
+ * Custom logs to wp-content/debug.log
+ * Prints errors and/or custom variables/output
+ * @usage write_log($args)
+ * @param $args | value or function to be debugged
+ */
 if (!function_exists('write_log')) {
   function write_log($log)
   {
