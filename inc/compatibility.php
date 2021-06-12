@@ -30,6 +30,7 @@ if (is_acf_activated()) {
 if (is_woocommerce_activated()) {
   $wc_dir = 'inc/compatibility/woocommerce/';
   $wc_inc = [
+    $wc_dir . 'woocommerce-common-functions.php',
     $wc_dir . 'class-fxm-woocommerce.php'
   ];
   array_push($compat_includes, ...$wc_inc);
