@@ -84,52 +84,48 @@ if (!class_exists('Fxm_Woocommerce')) :
 			if ('left-sidebar' == $site_sidebar) {
 				get_sidebar();
 			}
-?>
-			<div id="primary" class="content-area primary">
 
-				<?php fxm_content_top(); ?>
+			// <div id="primary" class="content-area primary">
 
-				<main id="main" class="site-main">
-					<div class="fxm-woocommerce-container">
-					<?php
-				}
+			// fxm_content_top();
 
-				/**
-				 * Add end of wrapper
-				 */
-				public function before_main_content_end()
-				{
-					?>
-					</div> <!-- .fxm-woocommerce-container -->
-				</main> <!-- #main -->
+			// <main id="main" class="site-main">
+			// <div class="fxm-woocommerce-container">
 
-				<?php fxm_content_after(); ?>
-
-			</div> <!-- #primary -->
-<?php
-					$site_sidebar = fxm_page_layout();
-					if ('right-sidebar' == $site_sidebar) {
-						get_sidebar();
-					}
-				}
-
-				/**
-				 * Remove WooCommerce Default Actions
-				 * To be replaced by custom content
-				 */
-				public function woocommerce_init()
-				{
-					remove_action('woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
-					remove_action('woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
-					remove_action('woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
-					remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5);
-					remove_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10);
-					remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10);
-					remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10);
-				}
-			}
-		endif;
-
-		if (apply_filters('fxm_enable_woocommerce_integration', true)) {
-			Fxm_Woocommerce::get_instance();
 		}
+
+		/**
+		 * Add end of wrapper
+		 */
+		public function before_main_content_end()
+		{
+			// </div> <!-- .fxm-woocommerce-container -->
+			// </main> <!-- #main -->
+			// fxm_content_after();
+			// </div> <!-- #primary -->
+			$site_sidebar = fxm_page_layout();
+			if ('right-sidebar' == $site_sidebar) {
+				get_sidebar();
+			}
+		}
+
+		/**
+		 * Remove WooCommerce Default Actions
+		 * To be replaced by custom content
+		 */
+		public function woocommerce_init()
+		{
+			remove_action('woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+			remove_action('woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+			remove_action('woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
+			remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5);
+			remove_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10);
+			remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10);
+			remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10);
+		}
+	}
+endif;
+
+if (apply_filters('fxm_enable_woocommerce_integration', true)) {
+	Fxm_Woocommerce::get_instance();
+}
