@@ -16,11 +16,19 @@ if (!defined('ABSPATH')) {
   exit; // Exit if accessed directly.
 }
 
+// 'inc/template-parts/.php',
 $template_parts_includes = [
-  'inc/template-parts/content.php',
-  'inc/template-parts/header.php',
-  'inc/template-parts/footer.php',
-  // 'inc/template-parts/.php',
+  //
+  'inc/template-parts/markup-extras.php',
+  //
+  'inc/template-parts/wrapper-actions.php',
+  'inc/template-parts/footer-actions.php',
+  'inc/template-parts/blocks.php',
+  // Loop Class
+  'inc/template-parts/class-content-loop.php',
+  // @todo Site Header
+  'inc/template-parts/class-header-content.php',
+  // 'inc/template-parts/header-actions.php',
 ];
 
 foreach ($template_parts_includes as $file) {

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -14,17 +15,14 @@
  *
  * @hooked themename_wrapper_end - 10 (outputs closing divs for the content)
  */
-fxm_content_after();
-fxm_footer_before();
-fxm_main_site_footer();
-?>
+fxm_content_after(); ?>
 
-
-<!-- Extra stuff like site-wide notice banners or back to top button here below -->
+<?php fxm_footer_before(); ?>
+<?php fxm_main_site_footer(); ?>
 <?php fxm_footer_after(); ?>
-<?php get_template_part('resources/blocks/back-to-top'); ?>
-
-<?php wp_footer(); ?>
+<!-- Extra stuff like site-wide notice banners or back to top button here below -->
 <?php fxm_body_bottom(); ?>
+<?php wp_footer(); ?>
 </body>
+
 </html>

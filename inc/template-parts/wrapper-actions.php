@@ -14,11 +14,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Wrapper Start
+ * Main Content Wrapper Start
+ * @see Partials - Wrappers
+ * @see Templates - header.php & footer.php
  *
- * @return void
+ * @
  * @since  1.0
- * @author CATO
+ * @author Cato
  **/
 if (!function_exists('fxm_wrapper_start')) {
   function fxm_wrapper_start()

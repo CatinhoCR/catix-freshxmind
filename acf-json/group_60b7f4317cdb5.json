@@ -94,25 +94,6 @@
             "ui_off_text": ""
         },
         {
-            "key": "field_603606d39fc3b",
-            "label": "Page Google Tag",
-            "name": "page_google_tag",
-            "type": "text",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_5fa2603dde464",
             "label": "Top Banners",
             "name": "top_banners",
@@ -471,7 +452,15 @@
             "type": "group",
             "instructions": "UNDER CONSTRUCTION! Not yet available for usage. Scheduled Release: Phase 2.5 January.\r\nCookie Banner Settings",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5fb65e0b3735c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -605,5 +594,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1622683173
+    "modified": 1623567068
 }

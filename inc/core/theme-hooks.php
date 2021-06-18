@@ -120,6 +120,9 @@ function fxm_body_top()
   do_action('fxm_body_top');
 }
 
+/**
+ * Body Bottom
+ */
 function fxm_body_bottom()
 {
   do_action('fxm_body_bottom');
@@ -135,6 +138,9 @@ function fxm_head_top()
   do_action('fxm_head_top');
 }
 
+/**
+ * Head Bottom
+ */
 function fxm_head_bottom()
 {
   do_action('fxm_head_bottom');
@@ -144,6 +150,7 @@ function fxm_head_bottom()
  * Semantic <header> hooks
  *
  * $fxm_supports[] = 'header';
+ * @see header.php in root folder
  * @see inc/template-parts/header.php
  */
 function fxm_header_before()
@@ -151,19 +158,40 @@ function fxm_header_before()
   do_action('fxm_header_before');
 }
 
-function fxm_header_after()
-{
-  do_action('fxm_header_after');
+/**
+ * Main Site Header
+ * Outputs top & bottom header hooks
+ * <header></header>
+ */
+function fxm_site_header() {
+  do_action('fxm_site_header');
 }
 
+/**
+ * Top Header Content inside <header>
+ */
 function fxm_header_top()
 {
   do_action('fxm_header_top');
 }
 
+/**
+ * Bottom Header Content inside <header>
+ */
 function fxm_header_bottom()
 {
   do_action('fxm_header_bottom');
+}
+
+/**
+ * After Header
+ *
+ * Use for adding content after closing </header>
+ * And before the <main> Wrappers
+ */
+function fxm_header_after()
+{
+  do_action('fxm_header_after');
 }
 
 /**

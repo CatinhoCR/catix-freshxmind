@@ -14,7 +14,7 @@
   }
 
   &__inner {
-    @include container(lg);
+    @include container(xl);
     @include flex-children(center, space-between);
   }
 

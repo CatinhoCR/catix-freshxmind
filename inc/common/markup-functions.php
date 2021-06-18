@@ -12,6 +12,9 @@ if (!defined('ABSPATH')) {
   exit; // Exit if accessed directly.
 }
 
+/**
+ *
+ */
 if (!function_exists('fxm_variation_classes')) :
   /**
    * Print formatted Strings to be added as CSS classes

@@ -8,8 +8,11 @@
  * @todo Translatable string values below
  */
 $show_btn = get_field('show_back_to_top_button', 'option');
+echo $show_btn;
 if (!$show_btn) {
   return;
+} else {
+  echo "Hello";
 }
 ?>
 <button class="button button--circle button--md back-top hidden" id="backTop" title="Scroll back to top">

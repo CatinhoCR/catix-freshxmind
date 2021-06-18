@@ -9,22 +9,30 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package freshxmind
+ * @package FreshXMind
+ * @author Cato
+ * @since 1.0.0
  */
 
-get_header();
+ if (!defined('ABSPATH')) {
+	exit; // Exit if accessed directly.
+}
+
+// get_header();
 // fxm_content_top();
 // fxm_content_bottom();
 // fxm_content_while_before();
 // fxm_content_while_after();
 ?>
+<?php get_header(); ?>
 
 	<!-- <main id="primary" class="site-main"> -->
 
 		<?php
-		while ( have_posts() ) :
-			the_post();
-      the_content();
+		// @todo fxm_main_loop_content();
+		// while ( have_posts() ) :
+		// 	the_post();
+    //   the_content();
 
 			// get_template_part( 'template-parts/content', 'page' );
 
@@ -33,12 +41,11 @@ get_header();
 			// 	comments_template();
 			// endif;
 
-		endwhile; // End of the loop.
+		// endwhile; // End of the loop.
 		?>
 
 	<!-- </main> -->
 
 
-<?php
-// get_sidebar();
-get_footer();
+<?php // get_sidebar(); ?>
+<?php get_footer(); ?>

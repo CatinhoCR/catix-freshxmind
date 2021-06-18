@@ -36,12 +36,10 @@ if (!defined('ABSPATH')) {
   <?php wp_body_open(); ?>
   <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'fxm'); ?></a>
 
-  <?php
-  fxm_header_before();
+  <?php fxm_header_before(); ?>
 
-  fxm_main_site_header();
+  <?php fxm_site_header();  ?>
 
-  fxm_header_after();
+  <?php fxm_header_after(); ?>
 
-  fxm_content_before();
-  ?>
+  <?php fxm_content_before(); ?>

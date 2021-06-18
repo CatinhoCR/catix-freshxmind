@@ -25,8 +25,8 @@ $core_includes = [
   // Custom Admin Customization Functions Menus
   'inc/core/admin-functions.php',
   // Custom Post Types, Taxonomies, Widgets, etc
-  'inc/core/post_types.php',
-  'inc/core/taxonomies.php',
+  // 'inc/core/post_types.php',
+  // 'inc/core/taxonomies.php',
   'inc/core/sidebar-manager.php',
   'inc/core/sidebars.php',
 ];
