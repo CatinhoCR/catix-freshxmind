@@ -1,23 +1,16 @@
 <?php
 
 /**
- * Helper Functions
- * @package freshxmind
- * @author Cato
- * @since 1.0.0
+ *
+ * Helpers Functions
  *
  */
-
-
 if (!defined('ABSPATH')) {
-  exit; // Exit if accessed directly.
+	exit; // Exit if accessed directly.
 }
 
 /**
  * Custom logs to wp-content/debug.log
- * Prints errors and/or custom variables/output
- * @usage write_log($args)
- * @param $args | value or function to be debugged
  */
 if (!function_exists('write_log')) {
   function write_log($log)
@@ -63,4 +56,35 @@ function get_protocol()
   } else {
     return 'http';
   }
+}
+
+/**
+ * @param array $actual The array to be defaulted
+ * @param array $defaults The default values for the array
+ *
+ * @return array The array with default values applied
+ */
+function apply_defaults($actual, $defaults)
+{
+  foreach ($defaults as $key => $value) {
+    if (empty($actual[$key])) {
+      $actual[$key] = $value;
+    }
+  }
+  return $actual;
+}
+
+/**
+ * Throws a 404 error when needed.
+ */
+function throw404($code = 404)
+{
+  global $wp_query;
+  $wp_query->set_404();
+
+  status_header($code);
+  nocache_headers();
+
+  require get_404_template();
+  exit;
 }

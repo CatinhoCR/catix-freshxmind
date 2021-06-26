@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package FreshXMind
+ * @package Ditso_Catix
  * @author Cato
  * @since 1.0.0
  */

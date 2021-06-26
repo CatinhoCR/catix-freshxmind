@@ -3,7 +3,7 @@
 /**
  * Custom Logo For Main Nav
  *
- * @package FreshXMind
+ * @package Ditso_Catix
  * @author Cato
  * @since 1.0.0
  */

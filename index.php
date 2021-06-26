@@ -10,7 +10,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package FreshXMind
+ * @package Ditso_Catix
  * @since 1.0.0
  * @todo:
  * @see /Users/andrescastillo/Sites/fxm/index.php

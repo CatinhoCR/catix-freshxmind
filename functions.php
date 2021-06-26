@@ -3,12 +3,10 @@
  * freshxmind functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
- * @package freshxmind
+ * @package Ditso_Catix
  * @see wp-includes/template.php for locate_template() source
- * Supports child theme overrides.
- * $includes - root main './inc/files'
  * @internal Please note that missing files will produce a fatal error.
- * @author CATO
+ * @author Cato
  * @since 1.0.0
  *
  */
@@ -30,21 +28,21 @@ define( 'FXM_THEME_URI', trailingslashit( esc_url( get_template_directory_uri() 
  */
 $includes = [
   // Setup helper functions
-  'inc/common-functions.php',
+  // 'inc/common-functions.php',
   // Theme Setup Functions and definitions
   'inc/theme-setup.php',
   // Theme customizations, hooks and extending
-  'inc/core.php',
+  // 'inc/core.php',
   // Customizer Theme API
-  'inc/customizer.php',
+  // 'inc/customizer.php',
   // Markup & Other Custom Functions
-  'inc/methods.php',
+  // 'inc/methods.php',
   // Custom template tags for this theme
-  'inc/custom-tags.php',
+  // 'inc/custom-tags.php',
   // Markup Files
-  'inc/template-parts.php',
+  // 'inc/template-parts.php',
   // Plugins Compatibility & Functions
-  'inc/compatibility.php',
+  // 'inc/compatibility.php',
 ];
 
 foreach ($includes as $file) {

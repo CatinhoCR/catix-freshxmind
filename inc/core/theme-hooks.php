@@ -1,13 +1,22 @@
 <?php
 
 /**
- * Theme Hook Alliance hook stub list.
- * @see 'inc/template-parts' folders for the add_action functions
+ * Wrapper functions for executing action hooks (do_action)
  *
- * @see 'inc/template-parts/[...]' for the functions registering the actions
+ * @note See theme hooks section of docs for more info
+ * @todo add to docs
+ * Added for easy extending/customization from plugins/child-themes
+ * The Action Hooks (add_action) AND it's callback function(s)
+ *
+ *
+ * @param array $args Parameters to pass to the callback functions.
+ *
+ * @see 'inc/theme-functions' for registration and callback functions
+ *
+ * Based on Theme Hook Alliance hook stub list
  * @see  https://github.com/zamoose/themehookalliance
  *
- * @package     FreshXMind
+ * @package Ditso
  * @author      Cato
  * @since       1.0.0
  */
@@ -96,7 +105,7 @@ add_filter('current_theme_supports-fxm_hooks', 'fxm_current_theme_supports', 10,
 /**
  * @see https://github.com/zamoose/themehookalliance/blob/master/fxm-theme-hooks.php
  *
- * Hooks should be of the form fxm_ + [section of the theme] + _[placement within block].
+ * Hooks should be of the form fxm_ + [HTML-Theme's block] + _[placement within block].
  */
 
 /**
@@ -108,6 +117,25 @@ add_filter('current_theme_supports-fxm_hooks', 'fxm_current_theme_supports', 10,
 function fxm_html_before()
 {
   do_action('fxm_html_before');
+}
+
+/**
+ * HTML <head> hooks
+ *
+ * $fxm_supports[] = 'head';
+ */
+function fxm_head_top()
+{
+  do_action('fxm_head_top');
+}
+
+/**
+ * Head Bottom
+ * @see header.php Template
+ */
+function fxm_head_bottom()
+{
+  do_action('fxm_head_bottom');
 }
 
 /**
@@ -126,24 +154,6 @@ function fxm_body_top()
 function fxm_body_bottom()
 {
   do_action('fxm_body_bottom');
-}
-
-/**
- * HTML <head> hooks
- *
- * $fxm_supports[] = 'head';
- */
-function fxm_head_top()
-{
-  do_action('fxm_head_top');
-}
-
-/**
- * Head Bottom
- */
-function fxm_head_bottom()
-{
-  do_action('fxm_head_bottom');
 }
 
 /**

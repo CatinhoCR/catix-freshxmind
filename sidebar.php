@@ -5,7 +5,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package FreshXMind
+ * @package Ditso_Catix
  */
 // if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 // 	return;

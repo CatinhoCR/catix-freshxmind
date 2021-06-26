@@ -2,11 +2,14 @@
 /**
  * Sidebar Manager functions
  *
- * @package     FreshXMind
- * @author      FreshXMind
- * @copyright   Copyright (c) 2020, FreshXMind
+ * @todo
+ * This is just a sample function, build its functionality as needed
+ *
+ * @package Ditso
+ * @author      Ditso
+ * @copyright   Copyright (c) 2020, Ditso
  * @link        https://wpfxm.com/
- * @since       FreshXMind 1.0.0
+ * @since       Ditso 1.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
