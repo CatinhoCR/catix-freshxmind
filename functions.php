@@ -31,6 +31,8 @@ define( 'FXM_THEME_URI', trailingslashit( esc_url( get_template_directory_uri() 
 $includes = [
   // Setup helper functions
   'inc/common-functions.php',
+  // Theme Setup Functions and definitions
+  'inc/theme-setup.php',
   // Theme customizations, hooks and extending
   'inc/core.php',
   // Customizer Theme API
@@ -39,8 +41,6 @@ $includes = [
   'inc/methods.php',
   // Custom template tags for this theme
   'inc/custom-tags.php',
-  // Theme Setup Functions and definitions
-  'inc/theme-setup.php',
   // Markup Files
   'inc/template-parts.php',
   // Plugins Compatibility & Functions

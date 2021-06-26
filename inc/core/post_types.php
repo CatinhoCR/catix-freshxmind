@@ -3,6 +3,8 @@
 /**
  * Use this as reference for adding Custom Post Types
  * Search & Replace "Book" with your CPT's name
+ * Ideally this would be added from a plugin, but depending on your project
+ * Added as a sample reference. Edit or delete as needed.
  *
  * @package FreshXMind
  * @author Cato
@@ -10,6 +12,10 @@
  *
  * @see https://developer.wordpress.org/reference/functions/register_post_type/
  */
+
+if (!defined('ABSPATH')) {
+	exit; // Exit if accessed directly.
+}
 
 if (!function_exists('fxm_register_cpt_books')) {
   function fxm_register_cpt_books()

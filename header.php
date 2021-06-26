@@ -27,8 +27,6 @@ if (!defined('ABSPATH')) {
   <link rel="profile" href="https://gmpg.org/xfn/11">
   <?php wp_head(); ?>
   <?php fxm_head_bottom(); ?>
-  <?php // @todo gtag support, css classes, header actions
-  ?>
 </head>
 
 <body class="page <?= implode(' ', get_body_class()) ?>">
