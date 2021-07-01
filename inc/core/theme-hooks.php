@@ -4,14 +4,10 @@
  * Wrapper functions for executing action hooks (do_action)
  *
  * @note See theme hooks section of docs for more info
- * @todo add to docs
- * Added for easy extending/customization from plugins/child-themes
- * The Action Hooks (add_action) AND it's callback function(s)
- *
  *
  * @param array $args Parameters to pass to the callback functions.
  *
- * @see 'inc/theme-functions' for registration and callback functions
+ * @see 'inc/views' for registration and callback functions
  *
  * Based on Theme Hook Alliance hook stub list
  * @see  https://github.com/zamoose/themehookalliance
@@ -215,6 +211,10 @@ function fxm_content_before()
   do_action('fxm_content_before');
 }
 
+/**
+ * Content After
+ * Closes </main> tag
+ */
 function fxm_content_after()
 {
   do_action('fxm_content_after');
@@ -338,6 +338,13 @@ function fxm_footer_top()
 function fxm_footer_bottom()
 {
   do_action('fxm_footer_bottom');
+}
+
+/**
+ * Main Site Footer
+ */
+function fxm_site_footer() {
+  do_action('fxm_site_footer');
 }
 
 // @todo

@@ -18,7 +18,6 @@
 	exit; // Exit if accessed directly.
 }
 
-// get_header();
 // fxm_content_top();
 // fxm_content_bottom();
 // fxm_content_while_before();

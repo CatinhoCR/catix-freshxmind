@@ -1,9 +1,10 @@
 <?php
 
 /**
- * The header for our theme
+ * The template for displaying the header
  *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
+ * Displays all of the <head> element and everything up until the page header div
+ * and the content wrapper start
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
@@ -32,7 +33,6 @@ if (!defined('ABSPATH')) {
 <body class="page <?= implode(' ', get_body_class()) ?>">
   <?php fxm_body_top(); ?>
   <?php wp_body_open(); ?>
-  <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'fxm'); ?></a>
 
   <?php fxm_header_before(); ?>
 

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * freshxmind functions and definitions
  *
@@ -11,38 +12,34 @@
  *
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
+if (!defined('ABSPATH')) {
+  exit; // Exit if accessed directly.
 }
 
 /**
  * Define Constants
  */
-define( 'FXM_THEME_VERSION', '1.0.0' );
-define( 'FXM_THEME_SETTINGS', 'fxm-settings' );
-define( 'FXM_THEME_DIR', trailingslashit( get_template_directory() ) );
-define( 'FXM_THEME_URI', trailingslashit( esc_url( get_template_directory_uri() ) ) );
+define('FXM_THEME_VERSION', '1.0.0');
+define('FXM_THEME_SETTINGS', 'fxm-settings');
+define('FXM_THEME_DIR', trailingslashit(get_template_directory()));
+define('FXM_THEME_URI', trailingslashit(esc_url(get_template_directory_uri())));
 
 /**
  * Theme's functions
  */
 $includes = [
   // Setup helper functions
-  // 'inc/common-functions.php',
+  'inc/helpers.php',
   // Theme Setup Functions and definitions
   'inc/theme-setup.php',
-  // Theme customizations, hooks and extending
-  // 'inc/core.php',
-  // Customizer Theme API
-  // 'inc/customizer.php',
+  // Theme Hooks, admin functions, template tags & functions
+  'inc/core.php',
+  // Actions, Filters and Views
+  'inc/theme-views.php',
   // Markup & Other Custom Functions
-  // 'inc/methods.php',
-  // Custom template tags for this theme
-  // 'inc/custom-tags.php',
-  // Markup Files
-  // 'inc/template-parts.php',
-  // Plugins Compatibility & Functions
-  // 'inc/compatibility.php',
+  'inc/methods.php',
+  // Customizer API Theme Options
+  'inc/customizer.php'
 ];
 
 foreach ($includes as $file) {
