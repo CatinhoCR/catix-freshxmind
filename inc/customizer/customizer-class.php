@@ -83,9 +83,12 @@ if (!class_exists('Fxm_Customizer')) :
       // Settings
       $this->register_brand_settings();
       $this->register_sidebar_settings();
+      $this->register_header_settings();
       // Controls
       $this->register_color_controls();
       $this->register_sidebar_controls();
+      $this->register_header_controls();
+      // $this->
 
     }
 
@@ -109,11 +112,11 @@ if (!class_exists('Fxm_Customizer')) :
      */
     public function register_sections()
     {
-      // Add Colors Section
+      // Colors Section
       $this->wpc->add_section(
         'fxm_color_options',
         array(
-          'title'       => __('Color Settings', 'fxm'), //Visible title of section
+          'title'       => __('Branding Color Settings', 'fxm'), //Visible title of section
           'priority'    => 10, //Determines what order this appears in
           'capability'  => 'edit_theme_options', //Capability needed to tweak
           'description' => __('', 'fxm'), //Descriptive tooltip
@@ -121,11 +124,23 @@ if (!class_exists('Fxm_Customizer')) :
         )
       );
 
-      // Add Sidebar Settings Section
+      // Sidebar Settings Section
       $this->wpc->add_section(
         'fxm_sidebar_settings',
         array(
           'title'       => __('Sidebar Settings', 'fxm'), //Visible title of section
+          'priority'    => 30, //Determines what order this appears in
+          'capability'  => 'edit_theme_options', //Capability needed to tweak
+          'description' => __('', 'fxm'), //Descriptive tooltip
+          'panel' => 'fxm_theme_options_panel',
+        )
+      );
+
+      // Site Header Settings Section
+      $this->wpc->add_section(
+        'fxm_header_settings',
+        array(
+          'title'       => __('Header Settings', 'fxm'), //Visible title of section
           'priority'    => 20, //Determines what order this appears in
           'capability'  => 'edit_theme_options', //Capability needed to tweak
           'description' => __('', 'fxm'), //Descriptive tooltip
@@ -181,11 +196,31 @@ if (!class_exists('Fxm_Customizer')) :
     }
 
     /**
-     *
+     * @todo Make these functions reusable so we can
+     * Add settings/controls/etc
+     * From other classes (like header)
      */
     public function register_header_settings()
     {
+      // Show Top Toolbar
+      $this->wpc->add_setting(
+        'fxm_show_top_toolbar',
+        array(
+          'default' => '',
+          'sanitize_callback' => '',
+          // 'transport' => 'postMessage' | 'refresh',
+        )
+        );
 
+      // Header Layout Selection
+      $this->wpc->add_setting(
+        'fxm_header_layout',
+        array(
+          'default' => 'fixed_mini',
+          'sanitize_callback' => '',
+          // 'transport' => 'postMessage' | 'refresh',
+        )
+      );
     }
 
     /**
@@ -236,6 +271,7 @@ if (!class_exists('Fxm_Customizer')) :
      */
     public function register_sidebar_controls()
     {
+      // Select default Sidebar to show
       $this->wpc->add_control(
         new WP_Customize_Control(
           $this->wpc,
@@ -258,6 +294,46 @@ if (!class_exists('Fxm_Customizer')) :
     }
 
     /**
+     * Header Controls
+     */
+    public function register_header_controls()
+    {
+      // Show Top Toolbar
+      $this->wpc->add_control(
+        new WP_Customize_Control(
+          $this->wpc,
+          'show_top_toolbar_check',
+          array(
+            'type' => 'checkbox',
+            'label'      => __('Show Header Top Toolbar', 'fxm'),
+            'description' => __('Check if the Main Header should display the top toolbar.', 'fxm'),
+            'section'    => 'fxm_header_settings',
+            'settings'   => 'fxm_show_top_toolbar',
+          )
+        )
+      );
+
+      // Header Layout
+      $this->wpc->add_control(
+        new WP_Customize_Control(
+          $this->wpc,
+          'header_layout_select',
+          array(
+            'type' => 'select',
+            'choices' => array(
+              'fixed_mini' => 'Fixed Top',
+              'static' => 'Static',
+            ),
+            'label'      => __('Header Layout', 'fxm'),
+            'description' => __('Select the Site`s header layout style.', 'fxm'),
+            'section'    => 'fxm_header_settings',
+            'settings'   => 'fxm_header_layout',
+          )
+        )
+      );
+    }
+
+    /**
      *
      */
     // public function load_config_files()
@@ -266,6 +342,7 @@ if (!class_exists('Fxm_Customizer')) :
     // }
 
     /**
+     * @todo abstract class inheritance-methods to reuse this shit
      * Register custom section and panel.
      *
      * @since 1.0.0

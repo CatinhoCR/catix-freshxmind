@@ -32,6 +32,7 @@ if (!defined('ABSPATH')) {
 
 <body class="page <?= implode(' ', get_body_class()) ?>">
   <?php fxm_body_top(); ?>
+
   <?php wp_body_open(); ?>
 
   <?php fxm_header_before(); ?>

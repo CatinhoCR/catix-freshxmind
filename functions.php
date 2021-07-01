@@ -39,7 +39,9 @@ $includes = [
   // Markup & Other Custom Functions
   'inc/methods.php',
   // Customizer API Theme Options
-  'inc/customizer.php'
+  'inc/customizer.php',
+  // Plugins Compat & Extends
+  'inc/plugins.php',
 ];
 
 foreach ($includes as $file) {
