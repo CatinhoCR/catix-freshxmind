@@ -82,8 +82,10 @@ if (!class_exists('Fxm_Customizer')) :
       $this->register_sections();
       // Settings
       $this->register_brand_settings();
+      $this->register_sidebar_settings();
       // Controls
       $this->register_color_controls();
+      $this->register_sidebar_controls();
 
     }
 
@@ -224,6 +226,32 @@ if (!class_exists('Fxm_Customizer')) :
             'description' => __('Secondary color used for buttons and other layout options', 'fxm'),
             'section' => 'fxm_color_options',
             'settings' => 'fxm_secondary_color',
+          )
+        )
+      );
+    }
+
+    /**
+     * Sidebar Controls
+     */
+    public function register_sidebar_controls()
+    {
+      $this->wpc->add_control(
+        new WP_Customize_Control(
+          $this->wpc,
+          'default_sidebar_select',
+          array(
+            'type' => 'select',
+            'choices' => array(
+              'default' => 'Default',
+              'right' => 'Right',
+              'left' => 'Left',
+              'none' => 'None',
+            ),
+            'label'      => __('Default Sidebar', 'fxm'),
+            'description' => __('Select your website default sidebar layout. You can override this for some pages below.', 'fxm'),
+            'section'    => 'fxm_sidebar_settings',
+            'settings'   => 'fxm_sidebar_default',
           )
         )
       );

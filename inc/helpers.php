@@ -1,15 +1,49 @@
 <?php
 
 /**
+ * Theme Helper Functions
  *
- * Helpers Functions
- *
+ * Conditional Tags
+ * Custom Error Log Output
+ * Bytes Display in Readable Format
+ * Apply Defaults
+ * Throw 404
  */
 if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 
 /**
+ * Check if WooCommerce is activated
+ */
+if (!function_exists('is_woocommerce_activated')) {
+  function is_woocommerce_activated()
+  {
+    if (class_exists('woocommerce')) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+
+/**
+ * Check if Advanced Custom Fields is activated
+ */
+if (!function_exists('is_acf_activated')) {
+  function is_acf_activated()
+  {
+    return (class_exists('acf')) ? true : false;
+    // if (class_exists('acf')) {
+    //   return true;
+    // } else {
+    //   return false;
+    // }
+  }
+}
+
+/**
+ * Write Error Log
  * Custom logs to wp-content/debug.log
  */
 if (!function_exists('write_log')) {
