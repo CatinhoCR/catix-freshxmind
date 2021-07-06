@@ -19,6 +19,7 @@ const SSLFILES = '/.config/valet/Certificates/' + HOST
  * This is the development config for webpack which
  * uses auto-reloading for php and js and hot module
  * replacement for css.
+ * @todo env homedir and paths host etc
  *
  * We use webpack-dev-server and browser-sync for hot
  * reloading and emit eslint and csslint messages

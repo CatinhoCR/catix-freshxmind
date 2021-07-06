@@ -1,13 +1,18 @@
 <?php
 
 /**
- * Theme Hook Alliance hook stub list.
- * @see 'inc/template-parts' folders for the add_action functions
+ * Wrapper functions for executing action hooks (do_action)
  *
- * @see 'inc/template-parts/[...]' for the functions registering the actions
+ * @note See theme hooks section of docs for more info
+ *
+ * @param array $args Parameters to pass to the callback functions.
+ *
+ * @see 'inc/views' for registration and callback functions
+ *
+ * Based on Theme Hook Alliance hook stub list
  * @see  https://github.com/zamoose/themehookalliance
  *
- * @package     FreshXMind
+ * @package Ditso
  * @author      Cato
  * @since       1.0.0
  */
@@ -96,7 +101,7 @@ add_filter('current_theme_supports-fxm_hooks', 'fxm_current_theme_supports', 10,
 /**
  * @see https://github.com/zamoose/themehookalliance/blob/master/fxm-theme-hooks.php
  *
- * Hooks should be of the form fxm_ + [section of the theme] + _[placement within block].
+ * Hooks should be of the form fxm_ + [HTML-Theme's block] + _[placement within block].
  */
 
 /**
@@ -111,21 +116,6 @@ function fxm_html_before()
 }
 
 /**
- * HTML <body> hooks
- * $fxm_supports[] = 'body';
- * @see wrappers.php
- */
-function fxm_body_top()
-{
-  do_action('fxm_body_top');
-}
-
-function fxm_body_bottom()
-{
-  do_action('fxm_body_bottom');
-}
-
-/**
  * HTML <head> hooks
  *
  * $fxm_supports[] = 'head';
@@ -135,15 +125,38 @@ function fxm_head_top()
   do_action('fxm_head_top');
 }
 
+/**
+ * Head Bottom
+ * @see header.php Template
+ */
 function fxm_head_bottom()
 {
   do_action('fxm_head_bottom');
 }
 
 /**
+ * HTML <body> hooks
+ * $fxm_supports[] = 'body';
+ * @see wrappers.php
+ */
+function fxm_body_top()
+{
+  do_action('fxm_body_top');
+}
+
+/**
+ * Body Bottom
+ */
+function fxm_body_bottom()
+{
+  do_action('fxm_body_bottom');
+}
+
+/**
  * Semantic <header> hooks
  *
  * $fxm_supports[] = 'header';
+ * @see header.php in root folder
  * @see inc/template-parts/header.php
  */
 function fxm_header_before()
@@ -151,19 +164,40 @@ function fxm_header_before()
   do_action('fxm_header_before');
 }
 
-function fxm_header_after()
-{
-  do_action('fxm_header_after');
+/**
+ * Main Site Header
+ * Outputs top & bottom header hooks
+ * <header></header>
+ */
+function fxm_site_header() {
+  do_action('fxm_site_header');
 }
 
+/**
+ * Top Header Content inside <header>
+ */
 function fxm_header_top()
 {
   do_action('fxm_header_top');
 }
 
+/**
+ * Bottom Header Content inside <header>
+ */
 function fxm_header_bottom()
 {
   do_action('fxm_header_bottom');
+}
+
+/**
+ * After Header
+ *
+ * Use for adding content after closing </header>
+ * And before the <main> Wrappers
+ */
+function fxm_header_after()
+{
+  do_action('fxm_header_after');
 }
 
 /**
@@ -177,29 +211,82 @@ function fxm_content_before()
   do_action('fxm_content_before');
 }
 
+/**
+ * Content After
+ * Closes </main> tag
+ */
 function fxm_content_after()
 {
   do_action('fxm_content_after');
 }
 
+/**
+ *
+ */
 function fxm_content_top()
 {
   do_action('fxm_content_top');
 }
 
+/**
+ *
+ */
 function fxm_content_bottom()
 {
   do_action('fxm_content_bottom');
 }
 
+/**
+ * Primary Content Top
+ */
+function fxm_primary_content_top() {
+	do_action( 'fxm_primary_content_top' );
+}
+
+/**
+ * Primary Content Bottom
+ */
+function fxm_primary_content_bottom() {
+	do_action( 'fxm_primary_content_bottom' );
+}
+
+/**
+ * Conten Page Loop.
+ *
+ * Called from page.php
+ */
+function fxm_content_page_loop() {
+	do_action( 'fxm_content_page_loop' );
+}
+
+/**
+ *
+ */
 function fxm_content_while_before()
 {
   do_action('fxm_content_while_before');
 }
 
+/**
+ *
+ */
 function fxm_content_while_after()
 {
   do_action('fxm_content_while_after');
+}
+
+/**
+ * Content loop
+ */
+function fxm_content_loop() {
+	do_action( 'fxm_content_loop' );
+}
+
+/**
+ * Pagination
+ */
+function fxm_pagination() {
+	do_action( 'fxm_pagination' );
 }
 
 /**
@@ -212,26 +299,41 @@ function fxm_entry_before()
   do_action('fxm_entry_before');
 }
 
+/**
+ *
+ */
 function fxm_entry_after()
 {
   do_action('fxm_entry_after');
 }
 
+/**
+ *
+ */
 function fxm_entry_content_before()
 {
   do_action('fxm_entry_content_before');
 }
 
+/**
+ *
+ */
 function fxm_entry_content_after()
 {
   do_action('fxm_entry_content_after');
 }
 
+/**
+ *
+ */
 function fxm_entry_top()
 {
   do_action('fxm_entry_top');
 }
 
+/**
+ *
+ */
 function fxm_entry_bottom()
 {
   do_action('fxm_entry_bottom');
@@ -247,6 +349,9 @@ function fxm_comments_before()
   do_action('fxm_comments_before');
 }
 
+/**
+ *
+ */
 function fxm_comments_after()
 {
   do_action('fxm_comments_after');
@@ -300,6 +405,13 @@ function fxm_footer_top()
 function fxm_footer_bottom()
 {
   do_action('fxm_footer_bottom');
+}
+
+/**
+ * Main Site Footer
+ */
+function fxm_site_footer() {
+  do_action('fxm_site_footer');
 }
 
 // @todo

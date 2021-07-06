@@ -1,13 +1,14 @@
 <?php
 
 /**
- * The header for our theme
+ * The template for displaying the header
  *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
+ * Displays all of the <head> element and everything up until the page header div
+ * and the content wrapper start
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package freshXmind
+ * @package Ditso_Catix
  */
 
 
@@ -27,21 +28,28 @@ if (!defined('ABSPATH')) {
   <link rel="profile" href="https://gmpg.org/xfn/11">
   <?php wp_head(); ?>
   <?php fxm_head_bottom(); ?>
-  <?php // @todo gtag support, css classes, header actions
-  ?>
 </head>
 
-<body class="page <?= implode(' ', get_body_class()) ?>">
+<body <?php body_class(); ?>>
   <?php fxm_body_top(); ?>
+
   <?php wp_body_open(); ?>
-  <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'fxm'); ?></a>
+
+  <?php fxm_header_before(); ?>
 
   <?php
-  fxm_header_before();
+  /**
+   * Theme Action Hook
+   * @see 'partials/blocks/header.php'
+   */
+  fxm_site_header();
+  ?>
 
-  fxm_main_site_header();
+  <?php fxm_header_after(); ?>
 
-  fxm_header_after();
-
+  <?php
+  /**
+   * @see 'inc/core'template-parts.php'
+   */
   fxm_content_before();
   ?>

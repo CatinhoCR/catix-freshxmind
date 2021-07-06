@@ -1,9 +1,8 @@
 <?php
 /**
- * Index file
+ * Index Security file
  *
- * @package Catix FreshXMind
- * @since FreshXMind 1.0.0
+ * @package Ditso_Catix
  */
 
-/* Silence is golden, and we agree. */
+/* Silence is golden */

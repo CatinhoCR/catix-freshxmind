@@ -1,13 +1,15 @@
 <?php
 
 /**
+ * @see DONE
+ *
  * A custom Navigation Walker Function to customize the output of the Wordpress built in Menus using wp_nav_menu($args) function
  * Used in partials/header/header-navbar.php
  * Customize or delete as needed
  *
  * @see https://developer.wordpress.org/reference/functions/wp_nav_menu/
  * @see https://developer.wordpress.org/reference/classes/walker/
- * @package freshxmind
+ * @package Ditso_Catix
  * @author Cato
  * @since 1.0.0
  *
@@ -23,7 +25,7 @@ if (!defined('ABSPATH')) {
  * @access      public
  * @since       1.0
  * @return      void
- * @package freshxmind
+ * @package Ditso_Catix
  */
 class FreshXMind_Custom_Megamenu extends Walker_Nav_Menu
 {

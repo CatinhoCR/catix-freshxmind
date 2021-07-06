@@ -3,7 +3,7 @@
 /**
  * WP Customizer API
  *
- * @package FreshXMind
+ * @package Ditso_Catix
  * @author Cato
  * @since version 1.0.0
  */
@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $customizer_includes = [
   // Custom Navigation Walker Functions
-  'inc/customizer/class-theme-customizer.php',
+  'inc/customizer/customizer-class.php',
 ];
 
 foreach ($customizer_includes as $file) {

@@ -1,36 +1,23 @@
 # Fresh X Mind Wordpress Starter Theme
 
-Fresh X Mind is a Wordpress starter theme. Modern and simple development workflow, made to quickly kickstart well organized & easy to maintain Wordpress themes. Webpack based setup supports Sass (scss) stylesheets, ECMAScript 2015+ compiling, Live reloading during development, image optimization, automatic error logs, code linting and a lot more. See the _complete_ [list of features](#features) below.
-Actively maintained and in constant development to ensure compliance with all the latest Wordpress updates, standards and guidelines.
+**Ditso** (_originally named FreshXMind_) is a _custom_ Wordpress **starter theme** with a **modern and simple development workflow** made for developers. Hot-reloading and bundling using Webpack, SCSS stylesheets, ES6+ Javascript and a modern PHP approach are some of Ditso's main features.
+Looking for a more minimal implementation, blank canvas, with only the basic workflow and no code? Look [here](https://github.com/CatinhoCR/ditso-theme-starter)
 
 [Contributions] and [feedback] welcome!
 
-Table of Contents:
-
-- [Fresh X Mind Wordpress Starter Theme](#fresh-x-mind-wordpress-starter-theme)
-  - [Features](#features)
-  - [Dependencies](#dependencies)
-    - [Optional Dependencies](#optional-dependencies)
-  - [Installation](#installation)
-    - [Run Webpack dev server with live reload](#run-webpack-dev-server-with-live-reload)
-    - [Compile assets for production](#compile-assets-for-production)
-  - [Theme Customization](#theme-customization)
-  - [Folder/Theme Structure](#foldertheme-structure)
-    - [Main Workflow](#main-workflow)
-    - [Styles](#styles)
-  - [Debugging](#debugging)
-  - [Usage](#usage)
-  - [Roadmap](#roadmap)
-  - [Contributing](#contributing)
-  - [License](#license)
-  - [Contact](#contact)
-  - [Acknowledgements](#acknowledgements)
-
 ## Features
 
-- Webpack workflow and live reloading for development, see folder [`build-tasks/`](build-tasks/)
-- Wordpress [coding standards] compliant
-- Custom theme hooks and actions built-in
+- Live Reloading during development
+- SCSS Support
+- ES5+ syntax support
+- Webpack Asset bundling and optimizations
+- Built In Helper functions for **debugging** and common used functions
+- Clear and modular folder structure for easy to maintain Wordpress themes
+- Updated regularly with Wordpress standards and best practices
+- Code Linting
+- Clear docs and extending ready
+- Built in basic common used functions to save the hustle
+- - Custom theme hooks and actions built-in
 - [Theme Options](#theme-options) customization using the [Customizer API]
 
 <!-- - **Gutenberg** ready theme
@@ -192,3 +179,7 @@ The core initial theme files were based off from [Underscores](https://underscor
 [Yarn]: https://classic.yarnpkg.com/en/docs/install
 [Advanced Custom Fields]: https://www.advancedcustomfields.com
 [WooCommerce]: https://woocommerce.com/
+
+### Thought for Developers
+
+While there are many great starter theme options out there already, I always found myself with the same _issues_ when creating new projects. Some are just too basic and simple, with no development workflow and bundling. Others were maybe too complex, or had too many dependencies I didn't need. Most have too many options and code that won't be needed and added complexity to new developers and/or required to learn a HUGE library (usually not extensively documented btw).

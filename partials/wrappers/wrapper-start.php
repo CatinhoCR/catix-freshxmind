@@ -1,18 +1,12 @@
 <?php
-
 /**
- * General Site Content Wrappers opening
- *
- * @package FreshXMind
- * @author Cato
- * @since 1.0.0
+ * @todo
+ * content wrapper classes for shit, like
+ * if sidebar is in use, or dif custom classes for specific pages
  */
-
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if (!defined('ABSPATH')) {
+  exit; // Exit if accessed directly.
+}
 ?>
-
-<main id="content" class="main-content <?php // freshxmind_wrapper_class_handles(); ?>">
-  <?php //if (freshxmind_is_has_sidebar()) :
-  ?>
-  <?php //endif;
-  ?>
+<main id="content" class="site-content">
+<?php fxm_content_top(); ?>

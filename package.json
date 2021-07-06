@@ -1,7 +1,7 @@
 {
   "name": "freshxmind",
   "version": "1.0.0",
-  "description": "Last version and making of this theme. Picking things from the ground up in other versions and making it much better. LAST version.",
+  "description": "Fresh X Mind is a Wordpress starter theme. Modern and yet simple development workflow, made to quickly kickstart well organized & easy to maintain Wordpress themes. Webpack based setup supports Sass (scss) stylesheets, ECMAScript 2015+ compiling, Live reloading during development, image optimization, automatic built-in error logs, code linting and a lot more.",
   "main": "src/styles/app.js",
   "license": "ISC",
   "repository": "https://github.com/CatinhoCR/freshxmind-starter-theme",

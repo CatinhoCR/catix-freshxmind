@@ -11,12 +11,13 @@
 @import 'base/globals';
 
 // Components (smaller partials used inside of blocks - divided for ease of reference)
-@import 'components/buttons';
+@import 'components/nav';
+// @import 'components/buttons';
 
 // Blocks (standalone parts which are direct children of a page)
 @import 'blocks/header';
-@import 'blocks/footer';
-@import 'blocks/back-to-top';
+// @import 'blocks/footer';
+// @import 'blocks/back-to-top';
 
 // Pages (styles specific to a certain template/page)
 

@@ -9,36 +9,38 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package freshxmind
+ * @package Ditso_Catix
+ * @author Cato
+ * @since 1.0.0
  */
 
-get_header();
-// fxm_content_top();
-// fxm_content_bottom();
-// fxm_content_while_before();
-// fxm_content_while_after();
+ if (!defined('ABSPATH')) {
+	exit; // Exit if accessed directly.
+}
 ?>
-
-	<!-- <main id="primary" class="site-main"> -->
-
-		<?php
-		while ( have_posts() ) :
-			the_post();
-      the_content();
-
-			// get_template_part( 'template-parts/content', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			// if ( comments_open() || get_comments_number() ) :
-			// 	comments_template();
-			// endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	<!-- </main> -->
+<?php get_header(); ?>
 
 
 <?php
-// get_sidebar();
-get_footer();
+if (fxm_page_layout() == 'left-sidebar') :
+	get_sidebar();
+endif;
+?>
+
+<div id="primary" <?php // fxm_primary_class(); ?>>
+	<?php
+	fxm_primary_content_top();
+
+	fxm_content_page_loop();
+
+	fxm_primary_content_bottom();
+	?>
+</div><!-- #primary -->
+
+
+<?php
+if (fxm_page_layout() == 'right-sidebar') :
+	get_sidebar();
+endif;
+?>
+<?php get_footer();

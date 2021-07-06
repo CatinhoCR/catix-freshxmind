@@ -1,42 +1,26 @@
 <?php
 
 /**
- * A
- * @package FreshXMind
- * @author Cato
- * @since 1.0.0
  *
  */
 
-
-if (!defined('ABSPATH')) {
-  exit; // Exit if accessed directly.
-}
-
 /**
- * Register navigation menus
- * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
+ * Activate WordPress Maintenance Mode
  */
-
-if (!function_exists('fxm_register_nav_menu')) {
-  function fxm_register_nav_menu()
+if (!function_exists('fxm_maintenance_mode()')) :
+  function fxm_maintenance_mode()
   {
-    register_nav_menus(array(
-      'primary-menu' => __('Primary Menu', 'fxm'),
-      'utilities-top-menu' => __('Utilities Top Menu', 'fxm'),
-      'hamburger-menu' => __('Hamburger Menu', 'fxm'),
-      'footer-menu' => __('Footer Menu', 'fxm')
-    ));
+    if (!current_user_can('edit_themes') || !is_user_logged_in()) {
+      // wp_die('<h1>Under Maintenance</h1><br />Website under planned maintenance. Please check back later.');
+    }
   }
-  add_action('after_setup_theme', 'fxm_register_nav_menu', 10);
-}
-
+  add_action('get_header', 'fxm_maintenance_mode');
+endif;
 
 /**
  * Disable Admin Bar to non editors or admins
- *
+ * show admin bar only for admins and editors
  */
-// show admin bar only for admins and editors
 if (!current_user_can('edit_posts') || !current_user_can('activate_plugins')) {
   add_filter('show_admin_bar', '__return_false');
 }

@@ -2,8 +2,7 @@
 /**
  * Index file
  *
- * @package Freshxmind
- * @since Freshxmind 1.0.0
+ * @package Ditso
  */
 
-/* Silence is golden, and we agree. */
+/* Silence is golden */
