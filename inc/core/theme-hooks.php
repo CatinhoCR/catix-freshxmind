@@ -290,6 +290,15 @@ function fxm_pagination() {
 }
 
 /**
+ * Archive header
+ * @see fxm_archive_page_header()
+ * located in theme-functions.php
+ */
+function fxm_archive_header() {
+	do_action( 'fxm_archive_header' );
+}
+
+/**
  * Semantic <entry> hooks
  *
  * $fxm_supports[] = 'entry';

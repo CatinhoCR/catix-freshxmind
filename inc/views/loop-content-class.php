@@ -90,7 +90,7 @@ if (!class_exists('Fxm_Loop')) :
 		public function template_parts_none()
 		{
 			if (is_archive() || is_search()) {
-				get_template_part('partials/content/content', 'none');
+				get_template_part('template-parts/content', 'none');
 			}
 		}
 
@@ -103,7 +103,7 @@ if (!class_exists('Fxm_Loop')) :
 		public function template_parts_404()
 		{
 			if (is_404()) {
-				get_template_part('partials/content/content', '404');
+				get_template_part('template-parts/content', '404');
 			}
 		}
 
@@ -115,7 +115,7 @@ if (!class_exists('Fxm_Loop')) :
 		 */
 		public function template_parts_page()
 		{
-			get_template_part('partials/content/content', 'page');
+			get_template_part('template-parts/content', 'page');
 		}
 
 		/**
@@ -127,7 +127,7 @@ if (!class_exists('Fxm_Loop')) :
 		public function template_parts_post()
 		{
 			if (is_single()) {
-				get_template_part('partials/content/content', 'single');
+				get_template_part('template-parts/content', 'single');
 			}
 		}
 
@@ -140,7 +140,7 @@ if (!class_exists('Fxm_Loop')) :
 		public function template_parts_search()
 		{
 			if (is_search()) {
-				get_template_part('partials/content/content', 'blog');
+				get_template_part('template-parts/content', 'blog');
 			}
 		}
 
@@ -175,7 +175,7 @@ if (!class_exists('Fxm_Loop')) :
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
 				// @see @todo CATO TODO:
-				// get_template_part( 'partials/content/content', fxm_get_post_format() );
+				// get_template_part( 'template-parts/content', fxm_get_post_format() );
 			}
 		}
 
@@ -246,7 +246,7 @@ if (!class_exists('Fxm_Loop')) :
 		}
 
 		/**
-		 * Add wrapper div 'ast-row' for FreshXMind template part.
+		 * Add wrapper div 'row' for FreshXMind template part.
 		 *
 		 * @since  1.2.7
 		 * @return void
@@ -254,12 +254,12 @@ if (!class_exists('Fxm_Loop')) :
 		public function fxm_templat_part_wrap_open()
 		{
 			if (is_archive() || is_search() || is_home()) {
-				echo '<div class="ast-row">';
+				echo '<div class="row">';
 			}
 		}
 
 		/**
-		 * Add closing wrapper div for 'ast-row' after FreshXMind template part.
+		 * Add closing wrapper div for 'row' after FreshXMind template part.
 		 *
 		 * @since  1.2.7
 		 * @return void

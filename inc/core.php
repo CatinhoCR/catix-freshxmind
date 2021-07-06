@@ -14,15 +14,17 @@ if (!defined('ABSPATH')) {
 }
 
 $core_includes = [
-  //
+  // Custom Theme Functions
+  'inc/core/theme-functions.php',
+  // Template Tags
   'inc/core/template-tags.php',
-  //
+  // Template Functions Hooked to WP
   'inc/core/template-functions.php',
   // Template Parts Hooked to Actions
   'inc/core/template-parts.php',
-  //
+  // Registering Sidebars
   'inc/core/sidebars.php',
-  //
+  // Theme Hooks
   'inc/core/theme-hooks.php',
 ];
 
