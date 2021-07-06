@@ -423,6 +423,13 @@ function fxm_site_footer() {
   do_action('fxm_site_footer');
 }
 
+/**
+ * 404
+ */
+function fxm_content_404_page() {
+	do_action( 'fxm_content_404_page' );
+}
+
 // @todo
 function fxm_print_theme_colors()
 {

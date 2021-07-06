@@ -20,7 +20,7 @@ get_header(); ?>
 
 <?php endif ?>
 
-	<div id="primary" <?php // fxm_primary_class(); ?>>
+	<div id="primary" <?php fxm_primary_class(); ?>>
 
 		<?php fxm_primary_content_top(); ?>
 

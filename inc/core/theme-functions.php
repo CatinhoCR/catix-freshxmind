@@ -8,6 +8,123 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
+ * Helper function to get the current post id.
+ */
+if ( ! function_exists( 'fxm_get_post_id' ) ) {
+
+	/**
+	 * Get post ID.
+	 *
+	 * @param  string $post_id_override Get override post ID.
+	 * @return number                   Post ID.
+	 */
+	function fxm_get_post_id( $post_id_override = '' ) {
+
+		if ( null == Astra_Theme_Options::$post_id ) {
+			global $post;
+
+			$post_id = 0;
+
+			if ( is_home() ) {
+				$post_id = get_option( 'page_for_posts' );
+			} elseif ( is_archive() ) {
+				global $wp_query;
+				$post_id = $wp_query->get_queried_object_id();
+			} elseif ( isset( $post->ID ) && ! is_search() && ! is_category() ) {
+				$post_id = $post->ID;
+			}
+
+			Astra_Theme_Options::$post_id = $post_id;
+		}
+
+		return apply_filters( 'fxm_get_post_id', Astra_Theme_Options::$post_id, $post_id_override );
+	}
+}
+
+/**
+ * Get post format
+ */
+if ( ! function_exists( 'fxm_get_post_format' ) ) {
+
+	/**
+	 * Get post format
+	 *
+	 * @param  string $post_format_override Override post formate.
+	 * @return string                       Return post format.
+	 */
+	function fxm_get_post_format( $post_format_override = '' ) {
+
+		if ( ( is_home() ) || is_archive() ) {
+			$post_format = 'blog';
+		} else {
+			$post_format = get_post_format();
+		}
+
+		return apply_filters( 'fxm_get_post_format', $post_format, $post_format_override );
+	}
+}
+
+/**
+ * Display classes for primary div
+ */
+if ( ! function_exists( 'fxm_primary_class' ) ) {
+
+	/**
+	 * Display classes for primary div
+	 *
+	 * @param string|array $class One or more classes to add to the class list.
+	 * @return void        Echo classes.
+	 */
+	function fxm_primary_class( $class = '' ) {
+
+		// Separates classes with a single space, collates classes for body element.
+		echo 'class="' . esc_attr( join( ' ', fxm_get_primary_class( $class ) ) ) . '"';
+	}
+}
+
+/**
+ * Retrieve the classes for the primary element as an array.
+ */
+if ( ! function_exists( 'fxm_get_primary_class' ) ) {
+
+	/**
+	 * Retrieve the classes for the primary element as an array.
+	 *
+	 * @param string|array $class One or more classes to add to the class list.
+	 * @return array        Return array of classes.
+	 */
+	function fxm_get_primary_class( $class = '' ) {
+
+		// array of class names.
+		$classes = array();
+
+		// default class for content area.
+		$classes[] = 'content-area';
+
+		// primary base class.
+		$classes[] = 'primary';
+
+		if ( ! empty( $class ) ) {
+			if ( ! is_array( $class ) ) {
+				$class = preg_split( '#\s+#', $class );
+			}
+			$classes = array_merge( $classes, $class );
+		} else {
+
+			// Ensure that we always coerce class to being an array.
+			$class = array();
+		}
+
+		// Filter primary div class names.
+		$classes = apply_filters( 'fxm_primary_class', $classes, $class );
+
+		$classes = array_map( 'sanitize_html_class', $classes );
+
+		return array_unique( $classes );
+	}
+}
+
+/**
  * Archive Page Title
  */
 if ( ! function_exists( 'fxm_archive_page_header' ) ) :

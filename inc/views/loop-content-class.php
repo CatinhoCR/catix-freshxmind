@@ -64,7 +64,7 @@ if (!class_exists('Fxm_Loop')) :
 			// add_action( 'fxm_page_template_parts_content', array( $this, 'template_parts_comments' ), 15 );
 			add_action( 'fxm_template_parts_content', array( $this, 'template_parts_post' ) );
 			// add_action( 'fxm_template_parts_content', array( $this, 'template_parts_search' ) );
-			// add_action( 'fxm_template_parts_content', array( $this, 'template_parts_default' ) );
+			add_action( 'fxm_template_parts_content', array( $this, 'template_parts_default' ) );
 			// add_action( 'fxm_template_parts_content', array( $this, 'template_parts_comments' ), 15 );
 
 			// Template None.
@@ -163,8 +163,6 @@ if (!class_exists('Fxm_Loop')) :
 		/**
 		 * Template part default
 		 *
-		 * @since 1.2.7
-		 * @return void
 		 */
 		public function template_parts_default()
 		{
@@ -174,15 +172,13 @@ if (!class_exists('Fxm_Loop')) :
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				// @see @todo CATO TODO:
-				// get_template_part( 'template-parts/content', fxm_get_post_format() );
+				get_template_part( 'template-parts/content', fxm_get_post_format() );
 			}
 		}
 
 		/**
 		 * Loop Markup for content page
 		 *
-		 * @since 1.3.1
 		 */
 		public function page_loop_markup()
 		{
@@ -193,8 +189,8 @@ if (!class_exists('Fxm_Loop')) :
 		 * Template part loop
 		 *
 		 * @param  boolean $is_page Loop outputs different content action for content page and default content.
-		 *         if is_page is set to true - do_action( 'fxm_page_template_parts_content' ); is added
-		 *         if is_page is false - do_action( 'fxm_template_parts_content' ); is added.
+		 *         true - do_action( 'fxm_page_template_parts_content' );
+		 *         false - do_action( 'fxm_template_parts_content' );
 		 * @since 1.2.7
 		 * @return void
 		 */
