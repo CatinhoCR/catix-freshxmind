@@ -290,6 +290,15 @@ function fxm_pagination() {
 }
 
 /**
+ * Archive header
+ * @see fxm_archive_page_header()
+ * located in theme-functions.php
+ */
+function fxm_archive_header() {
+	do_action( 'fxm_archive_header' );
+}
+
+/**
  * Semantic <entry> hooks
  *
  * $fxm_supports[] = 'entry';
@@ -412,6 +421,13 @@ function fxm_footer_bottom()
  */
 function fxm_site_footer() {
   do_action('fxm_site_footer');
+}
+
+/**
+ * 404
+ */
+function fxm_content_404_page() {
+	do_action( 'fxm_content_404_page' );
 }
 
 // @todo

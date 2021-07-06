@@ -7,36 +7,33 @@
  * @package Ditso_Catix
  */
 
-get_header();
 ?>
-<!--
-	<main id="primary" class="site-main">
 
-		<?php
-		/*
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'partials/content', get_post_type() );
-
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'fxm' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'fxm' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		*/
-		?>
-
-	</main>#main -->
+<?php get_header(); ?>
 
 <?php
-// get_sidebar();
-get_footer();
+if (fxm_page_layout() == 'left-sidebar') :
+	get_sidebar();
+endif;
+?>
+
+<div id="primary" <?php fxm_primary_class(); ?>>
+	<?php
+	fxm_primary_content_top();
+
+	fxm_content_loop();
+
+	fxm_pagination();
+
+	fxm_primary_content_bottom();
+	?>
+</div><!-- #primary -->
+
+<?php
+if (fxm_page_layout() == 'right-sidebar') :
+	get_sidebar();
+endif;
+?>
+
+<?php get_footer();
+
