@@ -114,7 +114,7 @@ if (!class_exists('Fxm_Header')) :
       if (!$show_toolbar) {
         return;
       }
-      get_template_part('partials/components/header', 'toolbar');
+      get_template_part('partials/components/nav/header', 'toolbar');
     }
 
     /**
@@ -123,7 +123,7 @@ if (!class_exists('Fxm_Header')) :
     public function fxm_header_bottom_content()
     {
 
-      get_template_part('partials/components/header', 'navbar');
+      get_template_part('partials/components/nav/header', 'navbar');
     }
 
     /**
@@ -136,7 +136,7 @@ if (!class_exists('Fxm_Header')) :
       $settings = [
         'layout' => $layout,
       ];
-      get_template_part('partials/blocks/header', '', $settings);
+      get_template_part('partials/blocks/header', 'nav', $settings);
     }
   }
 

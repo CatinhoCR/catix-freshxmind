@@ -14,9 +14,15 @@ if (!defined('ABSPATH')) {
 }
 
 $core_includes = [
+  //
   'inc/core/template-tags.php',
+  //
   'inc/core/template-functions.php',
+  // Template Parts Hooked to Actions
+  'inc/core/template-parts.php',
+  //
   'inc/core/sidebars.php',
+  //
   'inc/core/theme-hooks.php',
 ];
 

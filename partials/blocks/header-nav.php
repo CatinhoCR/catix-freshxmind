@@ -8,9 +8,9 @@
 if (!defined('ABSPATH')) {
   exit; // Exit if accessed directly.
 }
-$layout = $args['layout'];
+$layout[] = $args['layout'];
 ?>
-<header class="header" id="masthead">
+<header class="header <?php fxm_variation_classes('header', $layout); ?>" id="masthead">
   <?php fxm_header_top(); ?>
 
   <?php fxm_header_bottom(); ?>

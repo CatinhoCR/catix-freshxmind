@@ -87,7 +87,10 @@ if (!function_exists('fxm_variation_classes')) :
       return;
     }
     $classes = [];
+    $base_class = esc_html($base_class);
     foreach ($variations as $value) {
+
+      $value = esc_html($value);
       // Check if multiple word string coming from DB, make sure values on ACF make sense to CSS
       if (strpos($value, '_') !== false) {
         $vals = explode("_", $value);

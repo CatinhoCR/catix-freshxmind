@@ -220,24 +220,73 @@ function fxm_content_after()
   do_action('fxm_content_after');
 }
 
+/**
+ *
+ */
 function fxm_content_top()
 {
   do_action('fxm_content_top');
 }
 
+/**
+ *
+ */
 function fxm_content_bottom()
 {
   do_action('fxm_content_bottom');
 }
 
+/**
+ * Primary Content Top
+ */
+function fxm_primary_content_top() {
+	do_action( 'fxm_primary_content_top' );
+}
+
+/**
+ * Primary Content Bottom
+ */
+function fxm_primary_content_bottom() {
+	do_action( 'fxm_primary_content_bottom' );
+}
+
+/**
+ * Conten Page Loop.
+ *
+ * Called from page.php
+ */
+function fxm_content_page_loop() {
+	do_action( 'fxm_content_page_loop' );
+}
+
+/**
+ *
+ */
 function fxm_content_while_before()
 {
   do_action('fxm_content_while_before');
 }
 
+/**
+ *
+ */
 function fxm_content_while_after()
 {
   do_action('fxm_content_while_after');
+}
+
+/**
+ * Content loop
+ */
+function fxm_content_loop() {
+	do_action( 'fxm_content_loop' );
+}
+
+/**
+ * Pagination
+ */
+function fxm_pagination() {
+	do_action( 'fxm_pagination' );
 }
 
 /**
@@ -250,26 +299,41 @@ function fxm_entry_before()
   do_action('fxm_entry_before');
 }
 
+/**
+ *
+ */
 function fxm_entry_after()
 {
   do_action('fxm_entry_after');
 }
 
+/**
+ *
+ */
 function fxm_entry_content_before()
 {
   do_action('fxm_entry_content_before');
 }
 
+/**
+ *
+ */
 function fxm_entry_content_after()
 {
   do_action('fxm_entry_content_after');
 }
 
+/**
+ *
+ */
 function fxm_entry_top()
 {
   do_action('fxm_entry_top');
 }
 
+/**
+ *
+ */
 function fxm_entry_bottom()
 {
   do_action('fxm_entry_bottom');
@@ -285,6 +349,9 @@ function fxm_comments_before()
   do_action('fxm_comments_before');
 }
 
+/**
+ *
+ */
 function fxm_comments_after()
 {
   do_action('fxm_comments_after');

@@ -10,7 +10,13 @@
  * @package Ditso_Catix
  */
 ?>
-<?php fxm_content_after(); ?>
+<?php
+/**
+ * @see fxm_wrapper_end() in:
+ * 'inc/core'template-parts.php'
+ */
+fxm_content_after();
+?>
 
 <?php fxm_footer_before(); ?>
 

@@ -3,6 +3,9 @@
 /**
  * Header Navbar Component
  */
+if (!defined('ABSPATH')) {
+  exit; // Exit if accessed directly.
+}
 ?>
 <nav class="header__navbar nav">
   <div class="header__inner">
@@ -30,7 +33,8 @@
       $args = array(
         'theme_location' => 'primary',
         'container' => 'ul',
-        'menu_class' => 'header__nav nav nav--inline'
+        'menu_class' => 'header__nav nav nav--inline',
+        'fallback_cb' => false,
       );
       wp_nav_menu($args);
       ?>

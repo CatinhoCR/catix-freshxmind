@@ -30,7 +30,7 @@ if (!defined('ABSPATH')) {
   <?php fxm_head_bottom(); ?>
 </head>
 
-<body class="page <?= implode(' ', get_body_class()) ?>">
+<body <?php body_class(); ?>>
   <?php fxm_body_top(); ?>
 
   <?php wp_body_open(); ?>
@@ -38,13 +38,18 @@ if (!defined('ABSPATH')) {
   <?php fxm_header_before(); ?>
 
   <?php
-    /**
-     * Theme Action Hook
-     * @see 'partials/blocks/header.php'
-     */
-    fxm_site_header();
+  /**
+   * Theme Action Hook
+   * @see 'partials/blocks/header.php'
+   */
+  fxm_site_header();
   ?>
 
   <?php fxm_header_after(); ?>
 
-  <?php fxm_content_before(); ?>
+  <?php
+  /**
+   * @see 'inc/core'template-parts.php'
+   */
+  fxm_content_before();
+  ?>

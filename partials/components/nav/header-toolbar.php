@@ -15,6 +15,7 @@ if (!defined('ABSPATH')) {
       'theme_location'  => 'utilities',
       'container'       => 'ul',
       'menu_class'      => 'nav nav--inline nav--dark',
+      'fallback_cb' => false,
     );
     wp_nav_menu($args);
     ?>

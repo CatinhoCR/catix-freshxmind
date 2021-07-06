@@ -216,7 +216,7 @@ if (!class_exists('Fxm_Customizer')) :
       $this->wpc->add_setting(
         'fxm_header_layout',
         array(
-          'default' => 'fixed_mini',
+          'default' => 'sticky_mini',
           'sanitize_callback' => '',
           // 'transport' => 'postMessage' | 'refresh',
         )
@@ -321,8 +321,10 @@ if (!class_exists('Fxm_Customizer')) :
           array(
             'type' => 'select',
             'choices' => array(
-              'fixed_mini' => 'Fixed Top',
-              'static' => 'Static',
+              'sticky_mini' => 'Fixed Top + Mini on Scroll',
+              'static' => 'Static Normal Flow',
+              'sticky_big' => 'Fixed Top + Same size scroll',
+              'static_mini' => 'Static and Mini by default'
             ),
             'label'      => __('Header Layout', 'fxm'),
             'description' => __('Select the Site`s header layout style.', 'fxm'),
