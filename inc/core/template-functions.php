@@ -49,6 +49,27 @@ if (!function_exists('fxm_pingback_header')) :
 endif;
 
 /**
+ * Filter to Add CSS Classes to <li>'s
+ * of Nav Menus
+ */
+if (!function_exists('fxm_add_menu_li_class')) :
+  function fxm_add_menu_li_class($classes, $item, $args, $depth)
+  {
+    // @todo not working
+    // echo var_dump($args);
+    // if(isset($args->add_li_class)) {
+    // if (array_key_exists('add_li_class', $args)) {
+    // if (isset($args->item_class)) {
+    //   $classes[] = $args['add_li_class'];
+    // }
+    $classes[] = 'nav__item';
+    return $classes;
+  }
+  add_filter( 'nav_menu_css_class', 'fxm_add_menu_li_class', 10, 4 );
+endif;
+
+
+/**
  * Print CSS Classes
  * Block-Element-Modifier Formatted Variations
  * Based on template's conditions and params

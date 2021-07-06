@@ -30,7 +30,7 @@
       $args = array(
         'theme_location' => 'primary',
         'container' => 'ul',
-        'menu_class' => 'header__nav'
+        'menu_class' => 'header__nav nav nav--inline'
       );
       wp_nav_menu($args);
       ?>

@@ -103,10 +103,17 @@ if (!class_exists('Fxm_Header')) :
     }
 
     /**
-     *
+     * @see inc/core/theme-hooks.php
+     * Hooked to 'fxm_header_top'
      */
     public function fxm_header_top_content()
     {
+      // Toolbar Set to show on either Customizer or ACF Options Page
+      $show_toolbar =
+        get_theme_mod('fxm_show_top_toolbar') || get_field('show_top_toolbar', 'option');
+      if (!$show_toolbar) {
+        return;
+      }
       get_template_part('partials/components/header', 'toolbar');
     }
 
@@ -115,6 +122,7 @@ if (!class_exists('Fxm_Header')) :
      */
     public function fxm_header_bottom_content()
     {
+
       get_template_part('partials/components/header', 'navbar');
     }
 
@@ -123,14 +131,9 @@ if (!class_exists('Fxm_Header')) :
      */
     public function fxm_main_site_header()
     {
-      // Toolbar Set to show on either Customizer or ACF Options Page
-      $show_toolbar =
-        get_theme_mod('fxm_show_top_toolbar') || get_field('show_top_toolbar', 'option')
-      ;
       $layout = get_theme_mod('fxm_header_layout');
       // style settings for header
       $settings = [
-        'toolbar' => $show_toolbar,
         'layout' => $layout,
       ];
       get_template_part('partials/blocks/header', '', $settings);

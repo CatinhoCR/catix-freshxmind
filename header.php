@@ -37,7 +37,13 @@ if (!defined('ABSPATH')) {
 
   <?php fxm_header_before(); ?>
 
-  <?php fxm_site_header();  ?>
+  <?php
+    /**
+     * Theme Action Hook
+     * @see 'partials/blocks/header.php'
+     */
+    fxm_site_header();
+  ?>
 
   <?php fxm_header_after(); ?>
 

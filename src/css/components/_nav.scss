@@ -1,0 +1,27 @@
+.nav {
+  width: 100%;
+
+  .page_item {
+    margin: 0 0 rem(10) 0;
+  }
+}
+
+@include break-min($md) {
+  .nav {
+    &--inline {
+      @include flex-children(middle, flex-end);
+    }
+
+    &--dark {
+      .page_item {
+        > a {
+          color: $white;
+        }
+      }
+    }
+
+    .page_item {
+      margin: 0 rem(10) 0 0;
+    }
+  }
+}

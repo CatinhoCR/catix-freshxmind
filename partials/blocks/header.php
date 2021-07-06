@@ -1,23 +1,17 @@
 <?php
 
 /**
- *
+ * The Main Header Template Layout
+ * @see 'inc/views/main-header-class.php'
  */
 
 if (!defined('ABSPATH')) {
   exit; // Exit if accessed directly.
 }
-
-// Fetch needed stuff
-
-$toolbar = $args['toolbar'];
+$layout = $args['layout'];
 ?>
-<header class="nav" id="masthead">
-  <?php
-  if ($toolbar) {
-    fxm_header_top();
-  }
-  ?>
+<header class="header" id="masthead">
+  <?php fxm_header_top(); ?>
 
   <?php fxm_header_bottom(); ?>
 </header>

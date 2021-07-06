@@ -9,12 +9,12 @@ if (!defined('ABSPATH')) {
 }
 ?>
 <div class="header__toolbar">
-  <div class="header__inner justify-content-end">
+  <div class="header__inner">
     <?php
     $args = array(
-      'theme_location' => 'utilities',
-      'container' => 'ul',
-      'menu_class' => 'toolbar__menu'
+      'theme_location'  => 'utilities',
+      'container'       => 'ul',
+      'menu_class'      => 'nav nav--inline nav--dark',
     );
     wp_nav_menu($args);
     ?>
