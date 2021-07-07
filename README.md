@@ -1,7 +1,8 @@
 # Fresh X Mind Wordpress Starter Theme
 
-**Ditso** (_originally named FreshXMind_) is a _custom_ Wordpress **starter theme** with a **modern and simple development workflow** made for developers. Hot-reloading and bundling using Webpack, SCSS stylesheets, ES6+ Javascript and a modern PHP approach are some of Ditso's main features.
-Looking for a more minimal implementation, blank canvas, with only the basic workflow and no code? Look [here](https://github.com/CatinhoCR/ditso-theme-starter)
+Fresh X Mind is a _custom_ Wordpress **starter theme** with a **modern and simple development workflow** made for developers. Hot-reloading and bundling using Webpack, SCSS stylesheets, ES6+ Javascript and a modern PHP approach are some of Ditso's main features.
+
+Looking for a more minimal implementation, blank canvas, with only the basic workflow and no code? Look [here](https://github.com/CatinhoCR/ditso-theme-starter) for the "younger brother" of this repository, with no Customizer API implementation and nothing much so you can start custom projects without the need to delete much code if not relevant to your project.
 
 [Contributions] and [feedback] welcome!
 
